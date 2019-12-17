@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "Tests"; ObjectID = "0kH-8o-Dqf"; */
+"0kH-8o-Dqf.title" = "Tests";
+
+/* Class = "UINavigationItem"; title = "Tests"; ObjectID = "B3a-gv-NCo"; */
+"B3a-gv-NCo.title" = "Tests";
+
+/* Class = "UILabel"; text = "100%"; ObjectID = "CIU-gT-3UH"; */
+"CIU-gT-3UH.text" = "100%";
+
+/* Class = "UILabel"; text = "Java"; ObjectID = "JNS-fn-3Kv"; */
+"JNS-fn-3Kv.text" = "Java";
+
+/* Class = "UITabBarItem"; title = "Account"; ObjectID = "ofQ-2T-4Sr"; */
+"ofQ-2T-4Sr.title" = "Account";
