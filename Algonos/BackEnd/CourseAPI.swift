@@ -9,11 +9,16 @@
 import Foundation
 
 class CourseAPI {
+  static let server: String = "http://localhost:8080/courses/"
     
-    static func sendRequest() {
-        let server = "http://localhost:8080/getCourses"
+    static func getCourses(_ completion: @escaping (_ json: [[String: Any?]]) -> Void) {
+      let call = server + "find"
+      guard let url  = URL(string: call) else { return }
+      CourseAPI.request(to: url, completion)
+    }
+  
+    static func request(to url: URL, _ completion: @escaping (_ json: [[String: Any?]]) -> Void) {
         
-        guard let url  = URL(string: server) else {return}
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if let error = error {
@@ -21,13 +26,12 @@ class CourseAPI {
                 return
             }
             guard let data = data else {return}
-            do{
+            do {
                 let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
                 guard let jsonArray = jsonResponse as? [[String: Any]] else {return}
-                for i in 0...jsonArray.count - 1 {
-                    print(jsonArray[i])
+                DispatchQueue.main.async {
+                  completion(jsonArray)
                 }
-                
             } catch let parsingError {
                  print("Error", parsingError)
             }

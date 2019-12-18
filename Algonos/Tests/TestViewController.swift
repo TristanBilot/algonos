@@ -12,13 +12,22 @@ class TestViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let categories = ["Data structure", "Algorithm", "Deep Learning"]
-    let percentages = ["39", "70", "100"]
-    let images = ["data_struct.png", "algorithm.png", "ai.png"]
+    var categories: [String] = []
+    let percentages: [String] = []
+    let images: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initStyle()
+    }
+  
+    func loadTableView() {
+      CourseAPI.getCourses() { [weak self] json in
+        for i in 0...json.count - 1 {
+          self?.categories.append(json[i]["title"] as! String)
+        }
+        self?.tableView.reloadData()
+      }
     }
     
     func initStyle() {
@@ -27,8 +36,8 @@ class TestViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        CourseAPI.sendRequest()
-        if  segue.identifier == "categoryListSegue",
+        
+        if segue.identifier == "categoryListSegue",
             let vc = segue.destination as? TestListForOneCategoryViewController,
             let selectedIndex = tableView.indexPathForSelectedRow?.row
         {

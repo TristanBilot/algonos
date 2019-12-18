@@ -15,11 +15,25 @@ class TestListForOneCategoryViewController: UIViewController {
     var navigationItemTitle: String?
     var selectedCourseId: Int? = nil
     var selectedCategory: String?
+    var arr: [String?] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationItemTitle()
         setupNibCell()
+        loadTableView()
+    }
+  
+    func loadTableView() {
+      CourseAPI.getCourses() { [weak self] json in
+        if json.count == 0 {
+          return
+        }
+        for i in 0...json.count - 1 {
+          self?.arr.append(json[i]["title"] as? String)
+        }
+        self?.tableView.reloadData()
+      }
     }
     
     func setupNibCell() {
@@ -44,12 +58,13 @@ class TestListForOneCategoryViewController: UIViewController {
 extension TestListForOneCategoryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+      return arr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpecificCategoryCell", for: indexPath) as! SpecificCategoryCell
         cell.controller = self
+        cell.categoryLabel.text = arr[indexPath.row]
         return cell
     }
 }
