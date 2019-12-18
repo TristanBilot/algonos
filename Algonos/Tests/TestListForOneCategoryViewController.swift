@@ -25,7 +25,7 @@ class TestListForOneCategoryViewController: UIViewController {
     }
   
     func loadTableView() {
-      CourseAPI.getCourses() { [weak self] json in
+      CourseRequest().fetch() { [weak self] json in
         if json.count == 0 {
           return
         }

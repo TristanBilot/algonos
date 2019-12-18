@@ -22,7 +22,7 @@ class TestViewController: UIViewController {
     }
   
     func loadTableView() {
-      CourseAPI.getCourses() { [weak self] json in
+      CategoryRequest().fetch() { [weak self] json in
         for i in 0...json.count - 1 {
           self?.categories.append(json[i]["title"] as! String)
         }
