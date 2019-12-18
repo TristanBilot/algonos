@@ -14,7 +14,7 @@ class SpecificCategoryCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var progressionLabel: UILabel!
     
-    var controller: TestListForOneCategoryViewController?
+    var controller: CourseListViewController?
     var courseId: Int?
     
     override func awakeFromNib() {

@@ -1,5 +1,5 @@
 //
-//  TestListForOneCategoryViewController.swift
+//  CourseListViewController.swift
 //  Algonos
 //
 //  Created by Tristan Bilot on 13/12/2019.
@@ -8,14 +8,15 @@
 
 import UIKit
 
-class TestListForOneCategoryViewController: UIViewController {
+class CourseListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var categoryId: String?
     var navigationItemTitle: String?
     var selectedCourseId: Int? = nil
     var selectedCategory: String?
-    var arr: [String?] = []
+    var courses: [String?] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +26,15 @@ class TestListForOneCategoryViewController: UIViewController {
     }
   
     func loadTableView() {
-      CourseRequest().fetch() { [weak self] json in
-        if json.count == 0 {
-          return
+      CourseRequest().fetchWithCategoryId(categoryId) { [weak self] coursesJSON in
+        if coursesJSON.count == 0 {
+            print("courses length = 0")
+            return
         }
-        for i in 0...json.count - 1 {
-          self?.arr.append(json[i]["title"] as? String)
+        for i in 0...coursesJSON.count - 1 {
+            self?.courses.append(coursesJSON[i]["title"] as? String)
         }
-        self?.tableView.reloadData()
+            self?.tableView.reloadData()
       }
     }
     
@@ -47,24 +49,24 @@ class TestListForOneCategoryViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? CategoryViewController {
-            vc.courseId = selectedCourseId
+        if let vc = segue.destination as? CourseViewController {
+//            vc.categoryId = selectedCourseId
             vc.navigationItemTitle = selectedCategory
         }
     }
 
 }
 
-extension TestListForOneCategoryViewController: UITableViewDataSource, UITableViewDelegate {
+extension CourseListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return arr.count
+      return courses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpecificCategoryCell", for: indexPath) as! SpecificCategoryCell
         cell.controller = self
-        cell.categoryLabel.text = arr[indexPath.row]
+        cell.categoryLabel.text = courses[indexPath.row]
         return cell
     }
 }

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class CourseViewController: UIViewController {
     
     var navigationItemTitle: String?
-    var courseId: Int? = nil
+    var categoryId: String? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

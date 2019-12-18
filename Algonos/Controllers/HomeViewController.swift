@@ -8,23 +8,27 @@
 
 import UIKit
 
-class TestViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     var categories: [String] = []
+    var categoriesId: [String] = []
     let percentages: [String] = []
     let images: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initStyle()
+        loadTableView()
     }
   
     func loadTableView() {
       CategoryRequest().fetch() { [weak self] json in
+        if (json.count == 0) { return }
         for i in 0...json.count - 1 {
-          self?.categories.append(json[i]["title"] as! String)
+            self?.categories.append(json[i]["name"] as! String)
+            self?.categoriesId.append(json[i]["_id"] as! String)
         }
         self?.tableView.reloadData()
       }
@@ -38,18 +42,19 @@ class TestViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "categoryListSegue",
-            let vc = segue.destination as? TestListForOneCategoryViewController,
+            let vc = segue.destination as? CourseListViewController,
             let selectedIndex = tableView.indexPathForSelectedRow?.row
         {
             if let tableViewUnwrap = tableView, let selectedIndex = tableViewUnwrap.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedIndex, animated: true)
             }
             vc.navigationItemTitle = categories[selectedIndex]
+            vc.categoryId = categoriesId[selectedIndex]
         }
     }
 }
 
-extension TestViewController: UITableViewDataSource, UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
@@ -57,7 +62,7 @@ extension TestViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell") as! TestTableViewCell
-        cell.initCell(img: UIImage(named: images[indexPath.row]), category: categories[indexPath.row], score: percentages[indexPath.row] + "%")
+        cell.initCell(category: categories[indexPath.row], categoryId: categoriesId[indexPath.row])
         return cell
     }
 }

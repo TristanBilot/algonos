@@ -13,11 +13,17 @@ class TestTableViewCell: UITableViewCell {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var score: UILabel!
+    var categoryId: String?
     
     func initCell(img: UIImage?, category: String?, score: String?) {
         self.img.image = img
         self.category.text = category
         self.score.text = score
+    }
+    
+    func initCell(category: String, categoryId: String) {
+        self.category.text = category
+        self.categoryId = categoryId
     }
     
     func initProgressionCircle() {

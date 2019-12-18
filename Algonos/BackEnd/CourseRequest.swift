@@ -16,5 +16,11 @@ class CourseRequest {
       guard let url  = URL(string: call) else { return }
       RequestAPI.request(to: url, completion)
     }
+    
+    func fetchWithCategoryId(_ id: String?, _ completion: @escaping (_ json: [[String: Any?]]) -> Void) {
+        let call = path + "findWithCategoryId/" + id!
+        guard let url  = URL(string: call) else { return }
+        RequestAPI.request(to: url, completion)
+    }
   
 }
