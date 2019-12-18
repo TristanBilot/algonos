@@ -9,11 +9,9 @@
 import Foundation
 
 class RequestAPI {
-  
   static let server: String = "http://localhost:8080/"
 
   static func request(to url: URL, _ completion: @escaping (_ json: [[String: Any?]]) -> Void) {
-    
       let task = URLSession.shared.dataTask(with: url) {
           (data, response, error) in
           if let error = error {

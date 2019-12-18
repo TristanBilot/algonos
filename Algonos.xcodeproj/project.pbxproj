@@ -11,6 +11,11 @@
 		8435D76823AA7D9600B30CA1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435D76723AA7D9600B30CA1 /* Request.swift */; };
 		8435D76A23AA803900B30CA1 /* CategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435D76923AA803900B30CA1 /* CategoryRequest.swift */; };
 		BA21E8CF23AABC6800E34470 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8CE23AABC6800E34470 /* CourseListViewController.swift */; };
+		BA21E8D123AABE9000E34470 /* BasicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D023AABE9000E34470 /* BasicRequest.swift */; };
+		BA21E8D323AAC1DA00E34470 /* URLBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D223AAC1DA00E34470 /* URLBuilderProtocol.swift */; };
+		BA21E8D623AAC3B300E34470 /* CategoryURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D523AAC3B300E34470 /* CategoryURLBuilder.swift */; };
+		BA21E8D823AAC3C100E34470 /* CourseURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D723AAC3C100E34470 /* CourseURLBuilder.swift */; };
+		BA21E8DA23AAC5C900E34470 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D923AAC5C900E34470 /* URLBuilder.swift */; };
 		BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */; };
 		BA9A8BFF23A3C7DD00C24A52 /* SpecificCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFE23A3C7DD00C24A52 /* SpecificCategoryCell.swift */; };
 		BA9A8C0223A4104200C24A52 /* SpecificCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A8C0123A4104200C24A52 /* SpecificCategoryCell.xib */; };
@@ -52,6 +57,11 @@
 		8435D76723AA7D9600B30CA1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8435D76923AA803900B30CA1 /* CategoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRequest.swift; sourceTree = "<group>"; };
 		BA21E8CE23AABC6800E34470 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
+		BA21E8D023AABE9000E34470 /* BasicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRequest.swift; sourceTree = "<group>"; };
+		BA21E8D223AAC1DA00E34470 /* URLBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderProtocol.swift; sourceTree = "<group>"; };
+		BA21E8D523AAC3B300E34470 /* CategoryURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryURLBuilder.swift; sourceTree = "<group>"; };
+		BA21E8D723AAC3C100E34470 /* CourseURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseURLBuilder.swift; sourceTree = "<group>"; };
+		BA21E8D923AAC5C900E34470 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+localize.swift"; sourceTree = "<group>"; };
 		BA9A8BFE23A3C7DD00C24A52 /* SpecificCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificCategoryCell.swift; sourceTree = "<group>"; };
 		BA9A8C0123A4104200C24A52 /* SpecificCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificCategoryCell.xib; sourceTree = "<group>"; };
@@ -105,6 +115,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA21E8D423AAC33000E34470 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				BA21E8D923AAC5C900E34470 /* URLBuilder.swift */,
+				BA21E8D223AAC1DA00E34470 /* URLBuilderProtocol.swift */,
+				BA21E8D523AAC3B300E34470 /* CategoryURLBuilder.swift */,
+				BA21E8D723AAC3C100E34470 /* CourseURLBuilder.swift */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
 		BA9A8BFB23A39D9B00C24A52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,15 +145,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		BA9A8C0723A55B3800C24A52 /* BackEnd */ = {
+		BA9A8C0723A55B3800C24A52 /* Request */ = {
 			isa = PBXGroup;
 			children = (
 				BA9A8C0823A55BBA00C24A52 /* CourseRequest.swift */,
 				8435D76923AA803900B30CA1 /* CategoryRequest.swift */,
 				8435D76523AA7B9C00B30CA1 /* RequestAPI.swift */,
 				8435D76723AA7D9600B30CA1 /* Request.swift */,
+				BA21E8D023AABE9000E34470 /* BasicRequest.swift */,
 			);
-			path = BackEnd;
+			path = Request;
 			sourceTree = "<group>";
 		};
 		BAC4177E23A2981600AC1EE5 = {
@@ -159,7 +181,8 @@
 		BAC4178923A2981600AC1EE5 /* Algonos */ = {
 			isa = PBXGroup;
 			children = (
-				BA9A8C0723A55B3800C24A52 /* BackEnd */,
+				BA21E8D423AAC33000E34470 /* URL */,
+				BA9A8C0723A55B3800C24A52 /* Request */,
 				BA9A8C0023A4100900C24A52 /* Cells */,
 				BA9A8BFB23A39D9B00C24A52 /* Utils */,
 				BAC417C723A2F2E700AC1EE5 /* Account */,
@@ -344,12 +367,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA21E8D123AABE9000E34470 /* BasicRequest.swift in Sources */,
 				BA9A8C0623A447C200C24A52 /* CourseViewController.swift in Sources */,
 				8435D76A23AA803900B30CA1 /* CategoryRequest.swift in Sources */,
 				8435D76623AA7B9C00B30CA1 /* RequestAPI.swift in Sources */,
 				BA9A8C0423A4179D00C24A52 /* UIView+shadow.swift in Sources */,
+				BA21E8D323AAC1DA00E34470 /* URLBuilderProtocol.swift in Sources */,
+				BA21E8D823AAC3C100E34470 /* CourseURLBuilder.swift in Sources */,
 				BAC417BE23A29C1900AC1EE5 /* HomeViewController.swift in Sources */,
 				BA9A8C0923A55BBA00C24A52 /* CourseRequest.swift in Sources */,
+				BA21E8DA23AAC5C900E34470 /* URLBuilder.swift in Sources */,
+				BA21E8D623AAC3B300E34470 /* CategoryURLBuilder.swift in Sources */,
 				BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */,
 				BAC417C923A2F2FC00AC1EE5 /* AccountViewController.swift in Sources */,
 				BA9A8BFF23A3C7DD00C24A52 /* SpecificCategoryCell.swift in Sources */,
