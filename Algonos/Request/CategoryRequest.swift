@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 class CategoryRequest: BasicRequest {
     
@@ -16,11 +15,11 @@ class CategoryRequest: BasicRequest {
         super.urlBuilder = CategoryURLBuilder()
     }
       
-    override func fetch(_ completion: @escaping (_ json: JSON) -> Void) {
+    override func fetch(_ completion: @escaping (_ json: [[String: Any]]) -> Void) {
         super.fetch(completion)
     }
     
-    override func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void) {
+    override func fetchWithId(_ id: String?, _ completion: @escaping (_ json: [[String: Any]]) -> Void) {
         super.fetchWithId(id, completion)
     }
   

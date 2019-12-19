@@ -22,41 +22,19 @@ class HomeViewController: UIViewController {
         initStyle()
         loadTableView()
     }
-    
-    func convierteImagen(cadenaImagen: String) -> UIImage? {
-        let strings = cadenaImagen.split(separator: ",")
-        var bytes = [UInt8]()
-        for i in 0...strings.count - 1 {
-            if let signedByte = Int8(strings[i]) {
-                bytes.append(UInt8(bitPattern: signedByte))
-            } else {
-                // Do something with this error condition
-            }
-        }
-        let datos: Data = Data(bytes: bytes, count: bytes.count)
-        return UIImage(data: datos) // Note it's optional. Don't force unwrap!!!
-    }
   
     func loadTableView() {
       CategoryRequest().fetch() { [weak self] json in
         if (json.count == 0) { return }
         for i in 0...json.count - 1 {
-            self?.categories.append(json[i]["name"].string!)
-            self?.categoriesId.append(json[i]["_id"].string!)
-            do {
-//                self?.images.append(UIImage(data: try (json[i]["image"]["data"]["data"] as! Data)))
-//                print(try json[i]["image"]["data"]["data"].rawString())
-                let data = json[i]["image"]["data"]["data"]
-                let endMarker = NSData(bytes: data.string , length: data.count)
-                self?.images.append(UIImage(data: endMarker as Data))
-            } catch(let err) { print(err) }
-            
-//            let a = json[0]["user"] as? [String: Any?]?["name"] as? String
+            self?.categories.append(json[i]["name"] as! String)
+            self?.categoriesId.append(json[i]["_id"] as! String)
+            self?.images.append(UIImage().downloadImage(from: json[i]["image"] as! String))
         }
         self?.tableView.reloadData()
       }
     }
-    
+  
     func initStyle() {
         self.navigationItem.title = localize("HomeTitle")
     }

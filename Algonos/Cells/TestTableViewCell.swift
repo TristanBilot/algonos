@@ -16,8 +16,9 @@ class TestTableViewCell: UITableViewCell {
     var categoryId: String?
     
     func initCell(img: UIImage?, category: String, categoryId: String) {
-        self.img.image = img
         initCell(category: category, categoryId: categoryId)
+        guard let img = img else { return }
+        self.img.image = img
     }
     
     func initCell(category: String, categoryId: String) {

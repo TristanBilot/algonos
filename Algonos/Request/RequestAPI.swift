@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 class RequestAPI {
-  static let server: String = "http://192.168.1.52:8080/"
+//  static let server: String = "http://192.168.1.52:8080/"
+  static let server: String = "http://localhost:8080/"
 
-  static func request(to url: URL, _ completion: @escaping (_ json: JSON) -> Void) {
+  static func request(to url: URL, _ completion: @escaping (_ json: [[String: Any]]) -> Void) {
       let task = URLSession.shared.dataTask(with: url) {
           (data, response, error) in
           if let error = error {
@@ -21,11 +21,11 @@ class RequestAPI {
           }
           guard let data = data else {return}
           do {
-//              let jsonResponse = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-//              guard let jsonArray = jsonResponse as? [[String: Any]]] else {return}
-            let json = try JSON(data: data)
+              let jsonResponse = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+              guard let jsonArray = jsonResponse as? [[String: Any]] else {return}
+//            let json = try JSON(data: data)
               DispatchQueue.main.async {
-                completion(json)
+                completion(jsonArray)
               }
           } catch let parsingError {
                print("Error", parsingError)
