@@ -22,8 +22,6 @@ class RequestAPI {
           }
           guard let data = data else {return}
           do {
-//              let jsonResponse = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-//              guard let jsonArray = jsonResponse as? [[String: Any]] else {return}
               let json = try JSON(data: data)
               DispatchQueue.main.async {
                 completion(json)
