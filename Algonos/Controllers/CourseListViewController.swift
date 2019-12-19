@@ -12,11 +12,10 @@ class CourseListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var categoryId: String?
-    var navigationItemTitle: String?
-    var selectedCourseId: Int? = nil
-    var selectedCategory: String?
-    var courses: [String?] = []
+    var category: Category?
+    //selected courseCell (for use the segue from this controller)
+    var selectedCourse: Course?
+    var courses: [Course] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,47 +25,45 @@ class CourseListViewController: UIViewController {
     }
   
     func loadTableView() {
-      CourseRequest().fetchWithCategoryId(categoryId) { [weak self] coursesJSON in
-        if coursesJSON.count == 0 {
-            print("courses length = 0")
-            return
+      CourseRequest().fetchWithCategoryId(category?._id) { [weak self] json in
+        if json.count == 0 { return }
+        for i in 0...json.count - 1 {
+          self?.courses.append(Course(json[i]))
         }
-        for i in 0...coursesJSON.count - 1 {
-            self?.courses.append(coursesJSON[i]["title"] as? String)
-        }
-            self?.tableView.reloadData()
+        self?.tableView.reloadData()
       }
     }
     
     func setupNibCell() {
-        let nib = UINib.init(nibName: "SpecificCategoryCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "SpecificCategoryCell")
+      let nib = UINib.init(nibName: CourseCell.cellIdentifier, bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: CourseCell.cellIdentifier)
     }
     
     func setNavigationItemTitle() {
-        self.navigationItem.title = navigationItemTitle
+        self.navigationItem.title = category?.name
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? CourseViewController {
-//            vc.categoryId = selectedCourseId
-            vc.navigationItemTitle = selectedCategory
+          vc.course = selectedCourse
         }
     }
 
 }
 
 extension CourseListViewController: UITableViewDataSource, UITableViewDelegate {
-    
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return courses.count
+        return courses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SpecificCategoryCell", for: indexPath) as! SpecificCategoryCell
-        cell.controller = self
-        cell.categoryLabel.text = courses[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: CourseCell.cellIdentifier, for: indexPath) as! CourseCell
+        cell.initCell(
+            controller: self,
+            course: courses[indexPath.row]
+        )
         return cell
     }
 }

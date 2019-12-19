@@ -12,10 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var categories: [String] = []
-    var categoriesId: [String] = []
-    let percentages: [String] = []
-    var images: [UIImage?] = []
+    var categories: [Category] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +24,7 @@ class HomeViewController: UIViewController {
       CategoryRequest().fetch() { [weak self] json in
         if (json.count == 0) { return }
         for i in 0...json.count - 1 {
-            self?.categories.append(json[i]["name"] as! String)
-            self?.categoriesId.append(json[i]["_id"] as! String)
-            self?.images.append(UIImage().downloadImage(from: json[i]["image"] as! String))
+          self?.categories.append(Category(json[i]))
         }
         self?.tableView.reloadData()
       }
@@ -49,8 +44,9 @@ class HomeViewController: UIViewController {
             if let tableViewUnwrap = tableView, let selectedIndex = tableViewUnwrap.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedIndex, animated: true)
             }
-            vc.navigationItemTitle = categories[selectedIndex]
-            vc.categoryId = categoriesId[selectedIndex]
+          vc.category = categories[selectedIndex]
+//            vc.navigationItemTitle = categories[selectedIndex].name
+//            vc.categoryId = categories[selectedIndex]._id
         }
     }
 }
@@ -62,10 +58,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell") as! TestTableViewCell
-        cell.initCell(img:          images[indexPath.row],
-                      category:     categories[indexPath.row],
-                      categoryId:   categoriesId[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: CategoryCell.cellIdentifier) as! CategoryCell
+        cell.initCell(
+          img:      categories[indexPath.row].image,
+          category: categories[indexPath.row].name!
+        )
         return cell
     }
 }

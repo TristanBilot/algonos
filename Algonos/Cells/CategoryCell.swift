@@ -8,22 +8,17 @@
 
 import UIKit
 
-class TestTableViewCell: UITableViewCell {
+class CategoryCell: UITableViewCell {
+    static let cellIdentifier = "categoryCell"
 
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var score: UILabel!
-    var categoryId: String?
     
-    func initCell(img: UIImage?, category: String, categoryId: String) {
-        initCell(category: category, categoryId: categoryId)
+    func initCell(img: UIImage?, category: String) {
+        self.category.text = category
         guard let img = img else { return }
         self.img.image = img
-    }
-    
-    func initCell(category: String, categoryId: String) {
-        self.category.text = category
-        self.categoryId = categoryId
     }
     
     func initProgressionCircle() {

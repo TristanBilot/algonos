@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 protocol Request {
-    func fetch(_ completion: @escaping (_ json: [[String: Any]]) -> Void)
-    func fetchWithId(_ id: String?, _ completion: @escaping (_ json: [[String: Any]]) -> Void)
+    func fetch(_ completion: @escaping (_ json: JSON) -> Void)
+    func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void)
 }
 

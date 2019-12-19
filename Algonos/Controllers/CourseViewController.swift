@@ -10,8 +10,7 @@ import UIKit
 
 class CourseViewController: UIViewController {
     
-    var navigationItemTitle: String?
-    var categoryId: String? = nil
+    var course: Course?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +18,7 @@ class CourseViewController: UIViewController {
     }
     
     func setNavigationItemTitle() {
-        self.navigationItem.title = navigationItemTitle
+        self.navigationItem.title = course?.title
     }
 
 }
