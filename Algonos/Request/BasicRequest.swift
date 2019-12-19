@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class BasicRequest: Request {
     var urlBuilder: URLBuilder?
     
-    func fetch(_ completion: @escaping (_ json: [[String: Any?]]) -> Void) {
+    func fetch(_ completion: @escaping (_ json: JSON) -> Void) {
         guard let url = urlBuilder?.buildFetchURL() else { return }
         RequestAPI.request(to: url, completion)
     }
     
-    func fetchWithId(_ id: String?, _ completion: @escaping (_ json: [[String: Any?]]) -> Void) {
+    func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void) {
         guard let url = urlBuilder?.buildFetchWithIdURL(id) else { return }
         RequestAPI.request(to: url, completion)
     }

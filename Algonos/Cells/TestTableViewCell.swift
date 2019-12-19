@@ -15,10 +15,9 @@ class TestTableViewCell: UITableViewCell {
     @IBOutlet weak var score: UILabel!
     var categoryId: String?
     
-    func initCell(img: UIImage?, category: String?, score: String?) {
+    func initCell(img: UIImage?, category: String, categoryId: String) {
         self.img.image = img
-        self.category.text = category
-        self.score.text = score
+        initCell(category: category, categoryId: categoryId)
     }
     
     func initCell(category: String, categoryId: String) {
