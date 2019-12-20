@@ -7,7 +7,7 @@ target 'Algonos' do
 
   # Pods for Algonos
   pod 'SwiftyJSON', '~> 4.0'
-  
+  pod "SkeletonView"  
   target 'AlgonosTests' do
     inherit! :search_paths
     # Pods for testing

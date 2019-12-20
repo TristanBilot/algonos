@@ -13,12 +13,18 @@ class CategoryCell: UITableViewCell {
 
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var category: UILabel!
-    @IBOutlet weak var score: UILabel!
-    
-    func initCell(img: UIImage?, category: String) {
+    @IBOutlet weak var difficultyCircle: UIView!
+  
+    func initCell(img: UIImage?, category: String, difficulty: String) {
         self.category.text = category
         guard let img = img else { return }
         self.img.image = img
+        difficultyCircle.backgroundColor = UIColor.difficultyColor(difficulty)
+        initStyle()
+    }
+  
+    func initStyle() {
+      difficultyCircle.layer.cornerRadius = difficultyCircle.frame.size.width / 2
     }
     
     func initProgressionCircle() {

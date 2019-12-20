@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.showAnimatedGradientSkeleton()
         initStyle()
         loadTableView()
     }
@@ -27,6 +29,7 @@ class HomeViewController: UIViewController {
           self?.categories.append(Category(json[i]))
         }
         self?.tableView.reloadData()
+        self?.view.hideSkeleton()
       }
     }
   
@@ -36,17 +39,15 @@ class HomeViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "categoryListSegue",
             let vc = segue.destination as? CourseListViewController,
             let selectedIndex = tableView.indexPathForSelectedRow?.row
         {
-            if let tableViewUnwrap = tableView, let selectedIndex = tableViewUnwrap.indexPathForSelectedRow {
+            if let tableViewUnwrap = tableView,
+              let selectedIndex = tableViewUnwrap.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedIndex, animated: true)
             }
           vc.category = categories[selectedIndex]
-//            vc.navigationItemTitle = categories[selectedIndex].name
-//            vc.categoryId = categories[selectedIndex]._id
         }
     }
 }
@@ -61,8 +62,20 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: CategoryCell.cellIdentifier) as! CategoryCell
         cell.initCell(
           img:      categories[indexPath.row].image,
-          category: categories[indexPath.row].name!
+          category: categories[indexPath.row].name!,
+          difficulty: categories[indexPath.row].difficulty!
         )
         return cell
     }
+}
+
+extension HomeViewController: SkeletonTableViewDataSource {
+  
+  func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 10
+  }
+  
+  func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+    return "shimmerCell"
+  }
 }

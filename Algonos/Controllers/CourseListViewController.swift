@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class CourseListViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class CourseListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.showAnimatedGradientSkeleton()
         setNavigationItemTitle()
         setupNibCell()
         loadTableView()
@@ -31,6 +33,7 @@ class CourseListViewController: UIViewController {
           self?.courses.append(Course(json[i]))
         }
         self?.tableView.reloadData()
+        self?.view.hideSkeleton()
       }
     }
     
@@ -66,4 +69,15 @@ extension CourseListViewController: UITableViewDataSource, UITableViewDelegate {
         )
         return cell
     }
+}
+
+extension CourseListViewController: SkeletonTableViewDataSource {
+  
+  func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 10
+  }
+  
+  func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+    return "shimmerCell"
+  }
 }
