@@ -1,20 +1,24 @@
 PODS:
   - SkeletonView (1.8.2)
   - SwiftyJSON (4.3.0)
+  - UICircularProgressRing (6.4.0)
 
 DEPENDENCIES:
   - SkeletonView
   - SwiftyJSON (~> 4.0)
+  - UICircularProgressRing
 
 SPEC REPOS:
   trunk:
     - SkeletonView
     - SwiftyJSON
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  UICircularProgressRing: 907613633e76e561b972a3868c95517d14c71006
 
-PODFILE CHECKSUM: 0471b2c18dc246bd0af5c1a70888e9985e3c49a3
+PODFILE CHECKSUM: c23c58fda16844871f4c6845dfa4742f9f80efca
 
 COCOAPODS: 1.8.4

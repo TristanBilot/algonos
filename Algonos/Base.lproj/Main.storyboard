@@ -14,14 +14,41 @@
                     <view key="view" contentMode="scaleToFill" id="kbn-BT-l0h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxC-wT-eZO">
+                                <rect key="frame" x="87" y="208" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hwr-GG-KGa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAP-CT-y9X">
+                                <rect key="frame" x="176" y="507" width="63" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animateTap:" destination="eFc-6w-a7Z" eventType="touchUpInside" id="Zb3-2O-gWj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QxC-wT-eZO" firstAttribute="top" secondItem="TIw-TY-xpA" secondAttribute="top" constant="164" id="6R7-9t-L3r"/>
+                            <constraint firstItem="kAP-CT-y9X" firstAttribute="leading" secondItem="TIw-TY-xpA" secondAttribute="leading" constant="176" id="6kk-P8-DX5"/>
+                            <constraint firstItem="kAP-CT-y9X" firstAttribute="centerX" secondItem="QxC-wT-eZO" secondAttribute="centerX" id="BEk-By-Dj8"/>
+                            <constraint firstItem="TIw-TY-xpA" firstAttribute="trailing" secondItem="QxC-wT-eZO" secondAttribute="trailing" constant="87" id="Rhl-2A-Igq"/>
+                            <constraint firstItem="QxC-wT-eZO" firstAttribute="leading" secondItem="TIw-TY-xpA" secondAttribute="leading" constant="87" id="gZz-fx-NiE"/>
+                            <constraint firstItem="TIw-TY-xpA" firstAttribute="bottom" secondItem="kAP-CT-y9X" secondAttribute="bottom" constant="276" id="kY0-o9-ODs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TIw-TY-xpA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="TW2-98-w93"/>
+                    <connections>
+                        <outlet property="littleView" destination="QxC-wT-eZO" id="QoS-m5-fkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYt-7e-E4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="-611"/>
+            <point key="canvasLocation" x="1760.8695652173915" y="-611.38392857142856"/>
         </scene>
         <!--Courses-->
         <scene sceneID="tne-QT-ifu">
