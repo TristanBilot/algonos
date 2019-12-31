@@ -67,6 +67,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         )
         return cell
     }
+  
 }
 
 extension HomeViewController: SkeletonTableViewDataSource {

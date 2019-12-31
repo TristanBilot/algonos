@@ -67,8 +67,14 @@ extension CourseListViewController: UITableViewDataSource, UITableViewDelegate {
             controller: self,
             course: courses[indexPath.row]
         )
+        cell.selectionStyle = .none
         return cell
     }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("tapped")
+    self.performSegue(withIdentifier: "categoryToCourse", sender: self)
+  }
 }
 
 extension CourseListViewController: SkeletonTableViewDataSource {
