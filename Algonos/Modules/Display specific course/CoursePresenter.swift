@@ -7,5 +7,9 @@
 //
 
 class CoursePresenter: CoursePresentable {
+    var viewController: CourseViewController?
     
+    init(vc: CourseViewController) {
+        self.viewController = vc
+    }
 }

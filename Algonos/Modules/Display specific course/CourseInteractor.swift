@@ -6,6 +6,20 @@
 //  Copyright © 2020 Tristan Bilot. All rights reserved.
 //
 
-class CourseIntercator {
+class CourseInteractor {
+    var presenter: CoursePresentable
     
+    var course: Course?
+    
+    init(presenter: CoursePresentable, course: Course?) {
+        self.presenter = presenter
+        self.course = course
+    }
+    
+    func loadContent() {
+        CourseRequest().fetchWithId(course?._id) { [weak self] json in
+         
+         
+        }
+    }
 }

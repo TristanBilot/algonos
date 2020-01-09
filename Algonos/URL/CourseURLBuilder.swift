@@ -26,7 +26,7 @@ class CourseURLBuilder: URLBuilderProtocol {
      * Fetch list of all the courses where course.category.id = category.id
      * Useful to display the courses of a specific category
      */
-    func buildFetchWithIdURL(_ id: String?) -> URL? {
+    func buildFetchWithCategoryIdURL(_ id: String?) -> URL? {
         let call = fetchWithIdPath + id!
         guard let url  = URL(string: call) else { return nil }
         return url

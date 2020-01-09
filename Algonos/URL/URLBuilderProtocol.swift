@@ -9,6 +9,6 @@
 import Foundation
 
 protocol URLBuilderProtocol {
-    func buildFetchWithIdURL(_ id: String?) -> URL?
+    func buildFetchWithCategoryIdURL(_ id: String?) -> URL?
     func buildFetchURL() -> URL?
 }

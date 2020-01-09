@@ -9,12 +9,20 @@
 import UIKit
 
 class CourseViewController: UIViewController {
+    var interactor: CourseInteractor?
     
     var course: Course?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationItemTitle()
+    }
+    
+    //MARK: - Setup functions
+    func setup() {
+        let presenter = CoursePresenter(vc: self)
+        let interactor = CourseInteractor(presenter: presenter, course: self.course)
+        self.interactor = interactor
     }
     
     func setNavigationItemTitle() {

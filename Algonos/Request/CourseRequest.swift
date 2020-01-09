@@ -18,7 +18,7 @@ class CourseRequest: Request {
     }
     
     func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void) {
-        guard let url = urlBuilder.buildFetchWithIdURL(id) else { return }
+        guard let url = urlBuilder.buildFetchWithCategoryIdURL(id) else { return }
         RequestAPI.request(to: url, completion)
     }
   
