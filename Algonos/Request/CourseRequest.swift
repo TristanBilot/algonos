@@ -9,19 +9,17 @@
 import Foundation
 import SwiftyJSON
 
-class CourseRequest: BasicRequest {
-    
-    override init() {
-        super.init()
-        super.urlBuilder = CourseURLBuilder()
+class CourseRequest: Request {
+    var urlBuilder = CourseURLBuilder()
+      
+    func fetch(_ completion: @escaping (_ json: JSON) -> Void) {
+        guard let url = urlBuilder.buildFetchURL() else { return }
+        RequestAPI.request(to: url, completion)
     }
     
-    override func fetch(_ completion: @escaping (_ json: JSON) -> Void) {
-        super.fetch(completion)
-    }
-    
-    func fetchWithCategoryId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void) {
-        super.fetchWithId(id, completion)
+    func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void) {
+        guard let url = urlBuilder.buildFetchWithIdURL(id) else { return }
+        RequestAPI.request(to: url, completion)
     }
   
 }

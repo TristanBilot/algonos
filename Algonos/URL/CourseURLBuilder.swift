@@ -8,30 +8,36 @@
 
 import Foundation
 
-class CourseURLBuilder: URLBuilder {
+class CourseURLBuilder: URLBuilderProtocol {
     
     let routeParam: String = "courses/"
     let fetchParam: String = "fetch/"
     let fetchWithIdParam: String = "fetchWithCategoryId/"
     
-    override init() {
-        super.init()
-        super.fetchPath += routeParam + fetchParam
-        super.fetchWithIdPath += routeParam + fetchWithIdParam
+    var fetchPath: String
+    var fetchWithIdPath: String
+    
+    init() {
+        fetchPath = RequestAPI.server + routeParam + fetchParam
+        fetchWithIdPath = RequestAPI.server + routeParam + fetchWithIdParam
     }
     
     /*
      * Fetch list of all the courses where course.category.id = category.id
      * Useful to display the courses of a specific category
      */
-    override func buildFetchWithIdURL(_ id: String?) -> URL? {
-        return super.buildFetchWithIdURL(id)
+    func buildFetchWithIdURL(_ id: String?) -> URL? {
+        let call = fetchWithIdPath + id!
+        guard let url  = URL(string: call) else { return nil }
+        return url
     }
     
     /*
      * Fetch all the courses of the database
      */
-    override func buildFetchURL() -> URL? {
-        return super.buildFetchURL()
+    func buildFetchURL() -> URL? {
+        let call = fetchPath
+        guard let url  = URL(string: call) else { return nil }
+        return url
     }
 }

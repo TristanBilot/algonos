@@ -10,21 +10,18 @@ import UIKit
 import UICircularProgressRing
 
 class AccountViewController: UIViewController {
-  
-  var progressRing = UICircularProgressRing()
-  
-  @IBOutlet weak var littleView: UIView!
-  
-  @IBAction func animateTap(_ sender: Any) {
-    progressRing.startProgress(to: 0, duration: 5.0) {
-      print("Done animating!")
+    
+    
+    @IBOutlet weak var progressBar: CircularProgressBar!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        progressBar.labelSize = 20
+        progressBar.safePercent = 100
+        progressBar.setProgress(to: 1, withAnimation: true)
+        progressBar.lineWidth = 5
+        
     }
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
     
-    
-  }
-  
 }

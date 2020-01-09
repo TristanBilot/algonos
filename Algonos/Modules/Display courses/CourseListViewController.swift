@@ -10,35 +10,31 @@ import UIKit
 import SkeletonView
 
 class CourseListViewController: UIViewController {
+    var interactor: CoursesInteractor?
+    
+    var category: Category?
+    var selectedCourse: Course?
     
     @IBOutlet weak var tableView: UITableView!
     
-    var category: Category?
-    //selected courseCell (for use the segue from this controller)
-    var selectedCourse: Course?
-    var courses: [Course] = []
-
+    //MARK: - View did load
     override func viewDidLoad() {
         super.viewDidLoad()
         view.showAnimatedGradientSkeleton()
         setNavigationItemTitle()
         setupNibCell()
-        loadTableView()
+        setup()
     }
-  
-    func loadTableView() {
-      CourseRequest().fetchWithCategoryId(category?._id) { [weak self] json in
-        if json.count == 0 { return }
-        for i in 0...json.count - 1 {
-          self?.courses.append(Course(json[i]))
-        }
-        self?.tableView.reloadData()
-        self?.view.hideSkeleton()
-      }
+    
+    //MARK: - Setup functions
+    func setup() {
+        let presenter = CoursesPresenter(vc: self)
+        let interactor = CoursesInteractor(presenter: presenter, category: self.category)
+        self.interactor = interactor
     }
     
     func setupNibCell() {
-      let nib = UINib.init(nibName: CourseCell.cellIdentifier, bundle: nil)
+        let nib = UINib.init(nibName: CourseCell.cellIdentifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: CourseCell.cellIdentifier)
     }
     
@@ -49,41 +45,41 @@ class CourseListViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? CourseViewController {
-          vc.course = selectedCourse
+            vc.course = selectedCourse
         }
     }
-
+    
 }
 
+//MARK: - Table view
 extension CourseListViewController: UITableViewDataSource, UITableViewDelegate {
-  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courses.count
+        return interactor?.courses.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CourseCell.cellIdentifier, for: indexPath) as! CourseCell
         cell.initCell(
             controller: self,
-            course: courses[indexPath.row]
+            course: (interactor?.courses[indexPath.row])!
         )
         cell.selectionStyle = .none
         return cell
     }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("tapped")
-    self.performSegue(withIdentifier: "categoryToCourse", sender: self)
-  }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCourse = interactor?.courses[indexPath.row]
+        self.performSegue(withIdentifier: "categoryToCourse", sender: self)
+    }
 }
 
+//MARK: - Shimmer
 extension CourseListViewController: SkeletonTableViewDataSource {
-  
-  func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
-  }
-  
-  func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-    return "shimmerCell"
-  }
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "shimmerCell"
+    }
 }

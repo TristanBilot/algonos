@@ -10,45 +10,32 @@ import UIKit
 
 class CategoryCell: UITableViewCell {
     static let cellIdentifier = "categoryCell"
+    
+    var category: Category?
+    let progressRingBuilder = ProgressRingBuilder()
+    
+    var alreadyLoaded: Bool = false
 
     @IBOutlet weak var img: UIImageView!
-    @IBOutlet weak var category: UILabel!
-    @IBOutlet weak var difficultyCircle: UIView!
-  
-    func initCell(img: UIImage?, category: String, difficulty: String) {
-        self.category.text = category
-        guard let img = img else { return }
-        self.img.image = img
-        difficultyCircle.backgroundColor = UIColor.difficultyColor(difficulty)
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var progressBarView: CircularProgressBar!
+    
+    func initCell(category: Category) {
+        self.categoryLabel.text = category.name
+        self.category = category
+        if let img = category.image { self.img.image = img }
+        
         initStyle()
+        progressRingBuilder.initProgressRing(
+            progressBar: progressBarView,
+            safePercent: category.percentage,
+            animation: !alreadyLoaded
+        )
     }
   
     func initStyle() {
-      difficultyCircle.layer.cornerRadius = difficultyCircle.frame.size.width / 2
+        progressBarView.backgroundColor = UIColor.clear
     }
     
-    func initProgressionCircle() {
-        let center = self.center
-        let shapeLayer = CAShapeLayer()
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        shapeLayer.strokeColor = UIColor.orange.cgColor
-        shapeLayer.lineWidth = 5
-        shapeLayer.strokeEnd = 0
-        shapeLayer.lineCap = CAShapeLayerLineCap.round
-        shapeLayer.fillColor = UIColor.black.cgColor
-        
-        shapeLayer.frame.size.width = 3
-        shapeLayer.frame.size.height = 3
-        
-        shapeLayer.path = circularPath.cgPath
-        
-        self.layer.addSublayer(shapeLayer)
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.toValue = 1
-        animation.duration = 2
-        animation.isRemovedOnCompletion = false
-        animation.fillMode = CAMediaTimingFillMode.forwards
-        shapeLayer.add(animation, forKey: "urSoBasic")
-    }
     
 }

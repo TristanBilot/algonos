@@ -9,19 +9,22 @@
 import Foundation
 import SwiftyJSON
 
-class CategoryRequest: BasicRequest {
-    
-    override init() {
-        super.init()
-        super.urlBuilder = CategoryURLBuilder()
-    }
+class CategoryRequest: Request {
+    var urlBuilder = CategoryURLBuilder()
       
-    override func fetch(_ completion: @escaping (_ json: JSON) -> Void) {
-        super.fetch(completion)
+    func fetch(_ completion: @escaping (_ json: JSON) -> Void) {
+        guard let url = urlBuilder.buildFetchURL() else { return }
+        RequestAPI.request(to: url, completion)
     }
     
-    override func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void) {
-        super.fetchWithId(id, completion)
+    func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void) {
+        guard let url = urlBuilder.buildFetchWithIdURL(id) else { return }
+        RequestAPI.request(to: url, completion)
+    }
+    
+    func fetchPercentagesForCategory(categoryId: String?, _ completion: @escaping (_ json: JSON) -> Void) {
+        guard let url = urlBuilder.buildFetchPercentagesURL(categoryId) else { return }
+        RequestAPI.request(to: url, completion)
     }
   
 }

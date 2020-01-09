@@ -8,30 +8,48 @@
 
 import Foundation
 
-class CategoryURLBuilder: URLBuilder {
+class CategoryURLBuilder: URLBuilderProtocol {
     
     let routeParam: String = "categories/"
     let fetchParam: String = "fetch/"
     let fetchWithIdParam: String = "fetchWithCategoryId/"
+    let fetchPercentagesParam: String = "fetchPercentages/"
     
-    override init() {
-        super.init()
-        super.fetchPath += routeParam + fetchParam
-        super.fetchWithIdPath += routeParam + fetchWithIdParam
+    var fetchPath: String
+    var fetchWithIdPath: String
+    var fetchPercentagesPath: String
+    
+    init() {
+        fetchPath = RequestAPI.server + routeParam + fetchParam
+        fetchWithIdPath = RequestAPI.server + routeParam + fetchWithIdParam
+        fetchPercentagesPath = RequestAPI.server + routeParam + fetchPercentagesParam
     }
     
     /*
      * Not yet implemented in back-end...
      */
-    override func buildFetchWithIdURL(_ id: String?) -> URL? {
-        return super.buildFetchWithIdURL(id)
+    func buildFetchWithIdURL(_ id: String?) -> URL? {
+        let call = fetchWithIdPath + id!
+        guard let url  = URL(string: call) else { return nil }
+        return url
     }
     
     /*
      * Fetch all the categories of the database
      */
-    override func buildFetchURL() -> URL? {
-        return super.buildFetchURL()
+    func buildFetchURL() -> URL? {
+        let call = fetchPath
+        guard let url  = URL(string: call) else { return nil }
+        return url
+    }
+    
+    /*
+    * Fetch all the percentages of courses for one category
+    */
+    func buildFetchPercentagesURL(_ id: String?) -> URL? {
+        let call = fetchPercentagesPath + id!
+        guard let url  = URL(string: call) else { return nil }
+        return url
     }
     
 }

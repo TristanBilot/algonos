@@ -18,12 +18,22 @@
 		84A4F40323AB9524005DBF56 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F40223AB9524005DBF56 /* Category.swift */; };
 		B4C6882381068EF793199CD4 /* Pods_Algonos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC09458E799AB8C86AFD0526 /* Pods_Algonos.framework */; };
 		B690C30363A7FBBF68FFDC52 /* Pods_AlgonosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3874B3453A22A0FFD360D867 /* Pods_AlgonosTests.framework */; };
+		BA1E05CD23C12698004589FB /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05CC23C12698004589FB /* CategoriesPresenter.swift */; };
+		BA1E05CF23C126DB004589FB /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05CE23C126DB004589FB /* CategoriesInteractor.swift */; };
+		BA1E05D123C12768004589FB /* CategoriesPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05D023C12768004589FB /* CategoriesPresentable.swift */; };
+		BA1E05D323C1E0DA004589FB /* CoursesPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05D223C1E0DA004589FB /* CoursesPresentable.swift */; };
+		BA1E05D523C1E0EC004589FB /* CoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05D423C1E0EC004589FB /* CoursesPresenter.swift */; };
+		BA1E05D723C1E0FF004589FB /* CoursesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05D623C1E0FF004589FB /* CoursesInteractor.swift */; };
 		BA21E8CF23AABC6800E34470 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8CE23AABC6800E34470 /* CourseListViewController.swift */; };
-		BA21E8D123AABE9000E34470 /* BasicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D023AABE9000E34470 /* BasicRequest.swift */; };
 		BA21E8D323AAC1DA00E34470 /* URLBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D223AAC1DA00E34470 /* URLBuilderProtocol.swift */; };
 		BA21E8D623AAC3B300E34470 /* CategoryURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D523AAC3B300E34470 /* CategoryURLBuilder.swift */; };
 		BA21E8D823AAC3C100E34470 /* CourseURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D723AAC3C100E34470 /* CourseURLBuilder.swift */; };
-		BA21E8DA23AAC5C900E34470 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21E8D923AAC5C900E34470 /* URLBuilder.swift */; };
+		BA4CFF5D23C0A359008BABAB /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CFF5C23C0A359008BABAB /* UIColor+rgb.swift */; };
+		BA4CFF5F23C0C2BA008BABAB /* String+substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CFF5E23C0C2BA008BABAB /* String+substring.swift */; };
+		BA5979EC23C62F05008CF5A5 /* ShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979EB23C62F05008CF5A5 /* ShimmerCell.swift */; };
+		BA5979EE23C76C1C008CF5A5 /* CoursePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */; };
+		BA5979F023C76C2C008CF5A5 /* CourseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */; };
+		BA5979F223C76C3B008CF5A5 /* CoursePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */; };
 		BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */; };
 		BA9A8BFF23A3C7DD00C24A52 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */; };
 		BA9A8C0223A4104200C24A52 /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A8C0123A4104200C24A52 /* CourseCell.xib */; };
@@ -38,9 +48,11 @@
 		BAC417A223A2981A00AC1EE5 /* AlgonosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC417A123A2981A00AC1EE5 /* AlgonosTests.swift */; };
 		BAC417AD23A2981B00AC1EE5 /* AlgonosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC417AC23A2981B00AC1EE5 /* AlgonosUITests.swift */; };
 		BAC417BC23A29BE000AC1EE5 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC417BB23A29BE000AC1EE5 /* CategoryCell.swift */; };
-		BAC417BE23A29C1900AC1EE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC417BD23A29C1900AC1EE5 /* HomeViewController.swift */; };
+		BAC417BE23A29C1900AC1EE5 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC417BD23A29C1900AC1EE5 /* CategoriesViewController.swift */; };
 		BAC417C323A2F0E200AC1EE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC417C523A2F0E200AC1EE5 /* Localizable.strings */; };
 		BAC417C923A2F2FC00AC1EE5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC417C823A2F2FC00AC1EE5 /* AccountViewController.swift */; };
+		BAF216A123BBB5D5009C5031 /* ProgressRingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF216A023BBB5D5009C5031 /* ProgressRingBuilder.swift */; };
+		BAF216A323BD2267009C5031 /* CircularProgressbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF216A223BD2267009C5031 /* CircularProgressbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,12 +88,22 @@
 		AC09458E799AB8C86AFD0526 /* Pods_Algonos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algonos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F0DD760CCC04732438F96D /* Pods-AlgonosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgonosTests.debug.xcconfig"; path = "Target Support Files/Pods-AlgonosTests/Pods-AlgonosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B27E624BF1589E5247D5C951 /* Pods-Algonos-AlgonosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonos-AlgonosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Algonos-AlgonosUITests/Pods-Algonos-AlgonosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA1E05CC23C12698004589FB /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		BA1E05CE23C126DB004589FB /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		BA1E05D023C12768004589FB /* CategoriesPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresentable.swift; sourceTree = "<group>"; };
+		BA1E05D223C1E0DA004589FB /* CoursesPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesPresentable.swift; sourceTree = "<group>"; };
+		BA1E05D423C1E0EC004589FB /* CoursesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesPresenter.swift; sourceTree = "<group>"; };
+		BA1E05D623C1E0FF004589FB /* CoursesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesInteractor.swift; sourceTree = "<group>"; };
 		BA21E8CE23AABC6800E34470 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
-		BA21E8D023AABE9000E34470 /* BasicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRequest.swift; sourceTree = "<group>"; };
 		BA21E8D223AAC1DA00E34470 /* URLBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderProtocol.swift; sourceTree = "<group>"; };
 		BA21E8D523AAC3B300E34470 /* CategoryURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryURLBuilder.swift; sourceTree = "<group>"; };
 		BA21E8D723AAC3C100E34470 /* CourseURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseURLBuilder.swift; sourceTree = "<group>"; };
-		BA21E8D923AAC5C900E34470 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		BA4CFF5C23C0A359008BABAB /* UIColor+rgb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
+		BA4CFF5E23C0C2BA008BABAB /* String+substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+substring.swift"; sourceTree = "<group>"; };
+		BA5979EB23C62F05008CF5A5 /* ShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerCell.swift; sourceTree = "<group>"; };
+		BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePresenter.swift; sourceTree = "<group>"; };
+		BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseInteractor.swift; sourceTree = "<group>"; };
+		BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePresentable.swift; sourceTree = "<group>"; };
 		BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+localize.swift"; sourceTree = "<group>"; };
 		BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		BA9A8C0123A4104200C24A52 /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
@@ -102,12 +124,14 @@
 		BAC417AC23A2981B00AC1EE5 /* AlgonosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgonosUITests.swift; sourceTree = "<group>"; };
 		BAC417AE23A2981B00AC1EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAC417BB23A29BE000AC1EE5 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
-		BAC417BD23A29C1900AC1EE5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BAC417BD23A29C1900AC1EE5 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		BAC417BF23A2F05900AC1EE5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		BAC417C023A2F05900AC1EE5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BAC417C423A2F0E200AC1EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BAC417C623A2F0E800AC1EE5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BAC417C823A2F2FC00AC1EE5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		BAF216A023BBB5D5009C5031 /* ProgressRingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingBuilder.swift; sourceTree = "<group>"; };
+		BAF216A223BD2267009C5031 /* CircularProgressbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressbar.swift; sourceTree = "<group>"; };
 		CFFCA37AA3A7473F3405CDB3 /* Pods-Algonos-AlgonosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonos-AlgonosUITests.release.xcconfig"; path = "Target Support Files/Pods-Algonos-AlgonosUITests/Pods-Algonos-AlgonosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EFE04ABC3C398CFD26BFAA07 /* Pods-AlgonosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgonosTests.release.xcconfig"; path = "Target Support Files/Pods-AlgonosTests/Pods-AlgonosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,10 +187,52 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BA1E05C823C125E5004589FB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E05C923C12623004589FB /* Display categories */,
+				BA1E05CA23C1263A004589FB /* Display courses */,
+				BA1E05CB23C12652004589FB /* Display specific course */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BA1E05C923C12623004589FB /* Display categories */ = {
+			isa = PBXGroup;
+			children = (
+				BAC417BD23A29C1900AC1EE5 /* CategoriesViewController.swift */,
+				BA1E05CE23C126DB004589FB /* CategoriesInteractor.swift */,
+				BA1E05CC23C12698004589FB /* CategoriesPresenter.swift */,
+				BA1E05D023C12768004589FB /* CategoriesPresentable.swift */,
+			);
+			path = "Display categories";
+			sourceTree = "<group>";
+		};
+		BA1E05CA23C1263A004589FB /* Display courses */ = {
+			isa = PBXGroup;
+			children = (
+				BA21E8CE23AABC6800E34470 /* CourseListViewController.swift */,
+				BA1E05D623C1E0FF004589FB /* CoursesInteractor.swift */,
+				BA1E05D423C1E0EC004589FB /* CoursesPresenter.swift */,
+				BA1E05D223C1E0DA004589FB /* CoursesPresentable.swift */,
+			);
+			path = "Display courses";
+			sourceTree = "<group>";
+		};
+		BA1E05CB23C12652004589FB /* Display specific course */ = {
+			isa = PBXGroup;
+			children = (
+				BA9A8C0523A447C200C24A52 /* CourseViewController.swift */,
+				BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */,
+				BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */,
+				BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */,
+			);
+			path = "Display specific course";
+			sourceTree = "<group>";
+		};
 		BA21E8D423AAC33000E34470 /* URL */ = {
 			isa = PBXGroup;
 			children = (
-				BA21E8D923AAC5C900E34470 /* URLBuilder.swift */,
 				BA21E8D223AAC1DA00E34470 /* URLBuilderProtocol.swift */,
 				BA21E8D523AAC3B300E34470 /* CategoryURLBuilder.swift */,
 				BA21E8D723AAC3C100E34470 /* CourseURLBuilder.swift */,
@@ -177,10 +243,13 @@
 		BA9A8BFB23A39D9B00C24A52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BAF2169F23BBB5B7009C5031 /* ProgressRing */,
 				BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */,
 				BA9A8C0323A4179D00C24A52 /* UIView+shadow.swift */,
 				842769DB23AB8B5A00351E53 /* UIImage+downloadImage.swift */,
 				8471BFB823AD293000025B48 /* UIColor+difficultyColor.swift */,
+				BA4CFF5C23C0A359008BABAB /* UIColor+rgb.swift */,
+				BA4CFF5E23C0C2BA008BABAB /* String+substring.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -188,9 +257,10 @@
 		BA9A8C0023A4100900C24A52 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BAC417BB23A29BE000AC1EE5 /* CategoryCell.swift */,
 				BA9A8C0123A4104200C24A52 /* CourseCell.xib */,
 				BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */,
-				BAC417BB23A29BE000AC1EE5 /* CategoryCell.swift */,
+				BA5979EB23C62F05008CF5A5 /* ShimmerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -202,7 +272,6 @@
 				8435D76923AA803900B30CA1 /* CategoryRequest.swift */,
 				8435D76523AA7B9C00B30CA1 /* RequestAPI.swift */,
 				8435D76723AA7D9600B30CA1 /* Request.swift */,
-				BA21E8D023AABE9000E34470 /* BasicRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -233,13 +302,13 @@
 		BAC4178923A2981600AC1EE5 /* Algonos */ = {
 			isa = PBXGroup;
 			children = (
+				BA1E05C823C125E5004589FB /* Modules */,
 				84A4F3FF23AB94A6005DBF56 /* Model */,
 				BA21E8D423AAC33000E34470 /* URL */,
 				BA9A8C0723A55B3800C24A52 /* Request */,
 				BA9A8C0023A4100900C24A52 /* Cells */,
 				BA9A8BFB23A39D9B00C24A52 /* Utils */,
 				BAC417C723A2F2E700AC1EE5 /* Account */,
-				BAC417BA23A29BA900AC1EE5 /* Controllers */,
 				BAC4178A23A2981600AC1EE5 /* AppDelegate.swift */,
 				BAC4178C23A2981600AC1EE5 /* SceneDelegate.swift */,
 				BAC4179023A2981600AC1EE5 /* Main.storyboard */,
@@ -268,22 +337,21 @@
 			path = AlgonosUITests;
 			sourceTree = "<group>";
 		};
-		BAC417BA23A29BA900AC1EE5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BAC417BD23A29C1900AC1EE5 /* HomeViewController.swift */,
-				BA21E8CE23AABC6800E34470 /* CourseListViewController.swift */,
-				BA9A8C0523A447C200C24A52 /* CourseViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		BAC417C723A2F2E700AC1EE5 /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				BAC417C823A2F2FC00AC1EE5 /* AccountViewController.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		BAF2169F23BBB5B7009C5031 /* ProgressRing */ = {
+			isa = PBXGroup;
+			children = (
+				BAF216A023BBB5D5009C5031 /* ProgressRingBuilder.swift */,
+				BAF216A223BD2267009C5031 /* CircularProgressbar.swift */,
+			);
+			path = ProgressRing;
 			sourceTree = "<group>";
 		};
 		D09E94CBB93BD0A263D3F713 /* Frameworks */ = {
@@ -538,30 +606,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA21E8D123AABE9000E34470 /* BasicRequest.swift in Sources */,
+				BA4CFF5D23C0A359008BABAB /* UIColor+rgb.swift in Sources */,
 				842769DC23AB8B5A00351E53 /* UIImage+downloadImage.swift in Sources */,
 				8471BFB923AD293000025B48 /* UIColor+difficultyColor.swift in Sources */,
+				BA4CFF5F23C0C2BA008BABAB /* String+substring.swift in Sources */,
 				BA9A8C0623A447C200C24A52 /* CourseViewController.swift in Sources */,
 				8435D76A23AA803900B30CA1 /* CategoryRequest.swift in Sources */,
 				8435D76623AA7B9C00B30CA1 /* RequestAPI.swift in Sources */,
 				BA9A8C0423A4179D00C24A52 /* UIView+shadow.swift in Sources */,
 				BA21E8D323AAC1DA00E34470 /* URLBuilderProtocol.swift in Sources */,
+				BA5979EE23C76C1C008CF5A5 /* CoursePresenter.swift in Sources */,
 				BA21E8D823AAC3C100E34470 /* CourseURLBuilder.swift in Sources */,
-				BAC417BE23A29C1900AC1EE5 /* HomeViewController.swift in Sources */,
+				BA1E05D723C1E0FF004589FB /* CoursesInteractor.swift in Sources */,
+				BAF216A123BBB5D5009C5031 /* ProgressRingBuilder.swift in Sources */,
+				BA1E05D323C1E0DA004589FB /* CoursesPresentable.swift in Sources */,
+				BAC417BE23A29C1900AC1EE5 /* CategoriesViewController.swift in Sources */,
 				BA9A8C0923A55BBA00C24A52 /* CourseRequest.swift in Sources */,
-				BA21E8DA23AAC5C900E34470 /* URLBuilder.swift in Sources */,
 				BA21E8D623AAC3B300E34470 /* CategoryURLBuilder.swift in Sources */,
+				BA1E05CD23C12698004589FB /* CategoriesPresenter.swift in Sources */,
 				84A4F40123AB951B005DBF56 /* Course.swift in Sources */,
 				BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */,
 				847C214A23ABBE4A008B9A88 /* Model.swift in Sources */,
+				BAF216A323BD2267009C5031 /* CircularProgressbar.swift in Sources */,
 				84A4F40323AB9524005DBF56 /* Category.swift in Sources */,
 				BAC417C923A2F2FC00AC1EE5 /* AccountViewController.swift in Sources */,
+				BA5979F223C76C3B008CF5A5 /* CoursePresentable.swift in Sources */,
+				BA1E05D523C1E0EC004589FB /* CoursesPresenter.swift in Sources */,
 				BA9A8BFF23A3C7DD00C24A52 /* CourseCell.swift in Sources */,
+				BA1E05CF23C126DB004589FB /* CategoriesInteractor.swift in Sources */,
+				BA1E05D123C12768004589FB /* CategoriesPresentable.swift in Sources */,
 				BAC417BC23A29BE000AC1EE5 /* CategoryCell.swift in Sources */,
 				BAC4178B23A2981600AC1EE5 /* AppDelegate.swift in Sources */,
+				BA5979F023C76C2C008CF5A5 /* CourseInteractor.swift in Sources */,
 				BA21E8CF23AABC6800E34470 /* CourseListViewController.swift in Sources */,
 				8435D76823AA7D9600B30CA1 /* Request.swift in Sources */,
 				BAC4178D23A2981600AC1EE5 /* SceneDelegate.swift in Sources */,
+				BA5979EC23C62F05008CF5A5 /* ShimmerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

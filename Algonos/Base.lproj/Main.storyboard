@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Account-->
         <scene sceneID="T8u-XV-2Pp">
             <objects>
                 <viewController id="eFc-6w-a7Z" customClass="AccountViewController" customModule="Algonos" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,35 +15,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxC-wT-eZO">
-                                <rect key="frame" x="87" y="208" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPo-Rs-THG" customClass="CircularProgressBar" customModule="Algonos" customModuleProvider="target">
+                                <rect key="frame" x="275" y="246" width="52" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="hwr-GG-KGa"/>
+                                    <constraint firstAttribute="height" constant="56" id="BCx-KJ-b2w"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAP-CT-y9X">
-                                <rect key="frame" x="176" y="507" width="63" height="30"/>
-                                <state key="normal" title="Animate"/>
-                                <connections>
-                                    <action selector="animateTap:" destination="eFc-6w-a7Z" eventType="touchUpInside" id="Zb3-2O-gWj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QxC-wT-eZO" firstAttribute="top" secondItem="TIw-TY-xpA" secondAttribute="top" constant="164" id="6R7-9t-L3r"/>
-                            <constraint firstItem="kAP-CT-y9X" firstAttribute="leading" secondItem="TIw-TY-xpA" secondAttribute="leading" constant="176" id="6kk-P8-DX5"/>
-                            <constraint firstItem="kAP-CT-y9X" firstAttribute="centerX" secondItem="QxC-wT-eZO" secondAttribute="centerX" id="BEk-By-Dj8"/>
-                            <constraint firstItem="TIw-TY-xpA" firstAttribute="trailing" secondItem="QxC-wT-eZO" secondAttribute="trailing" constant="87" id="Rhl-2A-Igq"/>
-                            <constraint firstItem="QxC-wT-eZO" firstAttribute="leading" secondItem="TIw-TY-xpA" secondAttribute="leading" constant="87" id="gZz-fx-NiE"/>
-                            <constraint firstItem="TIw-TY-xpA" firstAttribute="bottom" secondItem="kAP-CT-y9X" secondAttribute="bottom" constant="276" id="kY0-o9-ODs"/>
+                            <constraint firstItem="TPo-Rs-THG" firstAttribute="leading" secondItem="TIw-TY-xpA" secondAttribute="leading" constant="275" id="UoF-8N-LtJ"/>
+                            <constraint firstItem="TIw-TY-xpA" firstAttribute="trailing" secondItem="TPo-Rs-THG" secondAttribute="trailing" constant="87" id="gTs-hi-06B"/>
+                            <constraint firstItem="TPo-Rs-THG" firstAttribute="top" secondItem="TIw-TY-xpA" secondAttribute="top" constant="202" id="xVe-hX-OsA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TIw-TY-xpA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="TW2-98-w93"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" id="TW2-98-w93"/>
                     <connections>
-                        <outlet property="littleView" destination="QxC-wT-eZO" id="QoS-m5-fkO"/>
+                        <outlet property="progressBar" destination="TPo-Rs-THG" id="aqj-LD-bla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYt-7e-E4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -53,7 +43,7 @@
         <!--Courses-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Algonos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CategoriesViewController" customModule="Algonos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,35 +67,52 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNS-fn-3Kv">
-                                                    <rect key="frame" x="131" y="33.5" width="170" height="23"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="170" id="Kbb-XW-CtH"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="131" y="33.5" width="91" height="23"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-JF-GRS">
-                                                    <rect key="frame" x="338" y="37" width="16" height="16"/>
-                                                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-5c-yn8" customClass="CircularProgressBar" customModule="Algonos" customModuleProvider="target">
+                                                    <rect key="frame" x="314" y="24" width="46" height="42"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                            <real key="value" value="100"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                                            <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="h3H-JF-GRS" secondAttribute="trailing" constant="21" id="4tr-Fc-D7M"/>
                                                 <constraint firstItem="Lwe-Px-A4o" firstAttribute="leading" secondItem="9Do-Ye-h7p" secondAttribute="leading" constant="20" id="BTu-K7-KUu"/>
-                                                <constraint firstItem="h3H-JF-GRS" firstAttribute="leading" secondItem="JNS-fn-3Kv" secondAttribute="trailing" constant="37" id="X0K-4H-6U4"/>
+                                                <constraint firstItem="aWc-5c-yn8" firstAttribute="top" secondItem="9Do-Ye-h7p" secondAttribute="topMargin" constant="13" id="Pu8-zf-iN7"/>
+                                                <constraint firstItem="aWc-5c-yn8" firstAttribute="leading" secondItem="9Do-Ye-h7p" secondAttribute="leading" constant="314" id="Sxr-DS-OkF"/>
                                                 <constraint firstItem="JNS-fn-3Kv" firstAttribute="top" secondItem="9Do-Ye-h7p" secondAttribute="topMargin" constant="22.5" id="YVr-ch-gRA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aWc-5c-yn8" secondAttribute="trailing" constant="15" id="aRr-wD-tmZ"/>
                                                 <constraint firstItem="Lwe-Px-A4o" firstAttribute="top" secondItem="9Do-Ye-h7p" secondAttribute="top" constant="10" id="c49-ic-PmL"/>
-                                                <constraint firstItem="h3H-JF-GRS" firstAttribute="top" secondItem="9Do-Ye-h7p" secondAttribute="topMargin" constant="26" id="dKm-qV-zKI"/>
                                                 <constraint firstAttribute="bottom" secondItem="Lwe-Px-A4o" secondAttribute="bottom" constant="10" id="eTu-v0-ZnO"/>
-                                                <constraint firstItem="h3H-JF-GRS" firstAttribute="centerY" secondItem="JNS-fn-3Kv" secondAttribute="centerY" id="nXu-9I-bOi"/>
+                                                <constraint firstItem="aWc-5c-yn8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JNS-fn-3Kv" secondAttribute="trailing" constant="8" symbolic="YES" id="ep3-ez-O4h"/>
                                                 <constraint firstItem="JNS-fn-3Kv" firstAttribute="leading" secondItem="Lwe-Px-A4o" secondAttribute="trailing" constant="41" id="uRG-b6-9VD"/>
+                                                <constraint firstItem="aWc-5c-yn8" firstAttribute="centerY" secondItem="JNS-fn-3Kv" secondAttribute="centerY" id="yRt-GQ-fC7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="category" destination="JNS-fn-3Kv" id="d8B-rx-bLb"/>
-                                            <outlet property="difficultyCircle" destination="h3H-JF-GRS" id="w2l-0c-9wa"/>
+                                            <outlet property="categoryLabel" destination="JNS-fn-3Kv" id="d8B-rx-bLb"/>
                                             <outlet property="img" destination="Lwe-Px-A4o" id="kY5-Q2-vlh"/>
+                                            <outlet property="progressBarView" destination="aWc-5c-yn8" id="fam-mp-1KV"/>
                                             <segue destination="mKw-0W-9Q7" kind="show" identifier="categoryListSegue" id="RYt-iH-GRw"/>
                                         </connections>
                                     </tableViewCell>
@@ -171,13 +178,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Mhn-d2-Dfi"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfM-E1-1eJ">
+                                <rect key="frame" x="184" y="821" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ciK-E3-5nb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nvr-ZM-1CR"/>
+                            <constraint firstItem="bfM-E1-1eJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="733" id="UHJ-Ee-SXt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ciK-E3-5nb" secondAttribute="trailing" id="ayh-xd-QWg"/>
                             <constraint firstItem="ciK-E3-5nb" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" constant="1" id="hzo-Mb-Uch"/>
                             <constraint firstItem="ciK-E3-5nb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ifV-8r-xxb"/>
+                            <constraint firstItem="bfM-E1-1eJ" firstAttribute="centerX" secondItem="ciK-E3-5nb" secondAttribute="centerX" id="ioC-jA-LCn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -209,11 +222,11 @@
             </objects>
             <point key="canvasLocation" x="852.17391304347836" y="137.94642857142856"/>
         </scene>
-        <!--Tests-->
+        <!--Courses-->
         <scene sceneID="7V1-ro-dqI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ws2-fC-aOD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tests" image="list.bullet" catalog="system" id="93Z-fu-1no"/>
+                    <tabBarItem key="tabBarItem" title="Courses" image="list.bullet" catalog="system" id="93Z-fu-1no"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="d28-D1-XmH">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
