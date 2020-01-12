@@ -12,14 +12,18 @@ class CourseURLBuilder: URLBuilderProtocol {
     
     let routeParam: String = "courses/"
     let fetchParam: String = "fetch/"
-    let fetchWithIdParam: String = "fetchWithCategoryId/"
+    let fetchWithCategoryIdParam: String = "fetchWithCategoryId/"
+    let fetchWithIdParam: String = "fetchWithId/"
     
     var fetchPath: String
+    var fetchWithCategoryIdPath: String
     var fetchWithIdPath: String
     
     init() {
-        fetchPath = RequestAPI.server + routeParam + fetchParam
-        fetchWithIdPath = RequestAPI.server + routeParam + fetchWithIdParam
+        let URI = RequestAPI.server + routeParam
+        fetchPath                = URI + fetchParam
+        fetchWithCategoryIdPath  = URI + fetchWithCategoryIdParam
+        fetchWithIdPath          = URI + fetchWithIdParam
     }
     
     /*
@@ -27,7 +31,7 @@ class CourseURLBuilder: URLBuilderProtocol {
      * Useful to display the courses of a specific category
      */
     func buildFetchWithCategoryIdURL(_ id: String?) -> URL? {
-        let call = fetchWithIdPath + id!
+        let call = fetchWithCategoryIdPath + id!
         guard let url  = URL(string: call) else { return nil }
         return url
     }
@@ -36,7 +40,16 @@ class CourseURLBuilder: URLBuilderProtocol {
      * Fetch all the courses of the database
      */
     func buildFetchURL() -> URL? {
-        let call = fetchPath
+        let call = fetchWithIdPath
+        guard let url  = URL(string: call) else { return nil }
+        return url
+    }
+    
+    /*
+     * Fetch the course of the specific id
+     */
+    func buildFetchWithIdURL(_ id: String?) -> URL? {
+        let call = fetchWithIdPath + id!
         guard let url  = URL(string: call) else { return nil }
         return url
     }

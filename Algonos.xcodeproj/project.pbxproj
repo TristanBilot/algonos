@@ -18,6 +18,8 @@
 		84A4F40323AB9524005DBF56 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F40223AB9524005DBF56 /* Category.swift */; };
 		B4C6882381068EF793199CD4 /* Pods_Algonos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC09458E799AB8C86AFD0526 /* Pods_Algonos.framework */; };
 		B690C30363A7FBBF68FFDC52 /* Pods_AlgonosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3874B3453A22A0FFD360D867 /* Pods_AlgonosTests.framework */; };
+		BA1D9A3923CB21BA00CD21F9 /* Complexity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1D9A3823CB21BA00CD21F9 /* Complexity.swift */; };
+		BA1D9A3B23CB2DD000CD21F9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1D9A3A23CB2DD000CD21F9 /* Content.swift */; };
 		BA1E05CD23C12698004589FB /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05CC23C12698004589FB /* CategoriesPresenter.swift */; };
 		BA1E05CF23C126DB004589FB /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05CE23C126DB004589FB /* CategoriesInteractor.swift */; };
 		BA1E05D123C12768004589FB /* CategoriesPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05D023C12768004589FB /* CategoriesPresentable.swift */; };
@@ -89,6 +91,8 @@
 		AC09458E799AB8C86AFD0526 /* Pods_Algonos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algonos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F0DD760CCC04732438F96D /* Pods-AlgonosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgonosTests.debug.xcconfig"; path = "Target Support Files/Pods-AlgonosTests/Pods-AlgonosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B27E624BF1589E5247D5C951 /* Pods-Algonos-AlgonosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonos-AlgonosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Algonos-AlgonosUITests/Pods-Algonos-AlgonosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA1D9A3823CB21BA00CD21F9 /* Complexity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complexity.swift; sourceTree = "<group>"; };
+		BA1D9A3A23CB2DD000CD21F9 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		BA1E05CC23C12698004589FB /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
 		BA1E05CE23C126DB004589FB /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
 		BA1E05D023C12768004589FB /* CategoriesPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresentable.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				847C214923ABBE4A008B9A88 /* Model.swift */,
 				84A4F40023AB951B005DBF56 /* Course.swift */,
 				84A4F40223AB9524005DBF56 /* Category.swift */,
+				BA1D9A3823CB21BA00CD21F9 /* Complexity.swift */,
+				BA1D9A3A23CB2DD000CD21F9 /* Content.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -623,6 +629,7 @@
 				BA1E05D723C1E0FF004589FB /* CoursesInteractor.swift in Sources */,
 				BAF216A123BBB5D5009C5031 /* ProgressRingBuilder.swift in Sources */,
 				BA1E05D323C1E0DA004589FB /* CoursesPresentable.swift in Sources */,
+				BA1D9A3923CB21BA00CD21F9 /* Complexity.swift in Sources */,
 				BAC417BE23A29C1900AC1EE5 /* CategoriesViewController.swift in Sources */,
 				BA9A8C0923A55BBA00C24A52 /* CourseRequest.swift in Sources */,
 				BA21E8D623AAC3B300E34470 /* CategoryURLBuilder.swift in Sources */,
@@ -641,6 +648,7 @@
 				BAC417BC23A29BE000AC1EE5 /* CategoryCell.swift in Sources */,
 				BAC4178B23A2981600AC1EE5 /* AppDelegate.swift in Sources */,
 				BA5979F023C76C2C008CF5A5 /* CourseInteractor.swift in Sources */,
+				BA1D9A3B23CB2DD000CD21F9 /* Content.swift in Sources */,
 				BA21E8CF23AABC6800E34470 /* CourseListViewController.swift in Sources */,
 				8435D76823AA7D9600B30CA1 /* Request.swift in Sources */,
 				BAC4178D23A2981600AC1EE5 /* SceneDelegate.swift in Sources */,

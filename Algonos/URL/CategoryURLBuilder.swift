@@ -52,13 +52,4 @@ class CategoryURLBuilder: URLBuilderProtocol {
         return url
     }
     
-    /*
-    * Fetch the course of the specific id
-    */
-    func buildFetchWithIdURL(_ id: String?) -> URL? {
-        let call = fetchPath + id!
-        guard let url  = URL(string: call) else { return nil }
-        return url
-    }
-    
 }

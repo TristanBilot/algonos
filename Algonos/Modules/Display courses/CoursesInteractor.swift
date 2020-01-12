@@ -19,7 +19,7 @@ class CoursesInteractor {
     }
     
     func loadTableView() {
-        CourseRequest().fetchWithId(category?._id) { [weak self] json in
+        CourseRequest().fetchWithCategoryId(category?._id) { [weak self] json in
             if json.count == 0 { return }
             for i in 0..<json.count {
                 self?.courses.append(Course(json[i]))

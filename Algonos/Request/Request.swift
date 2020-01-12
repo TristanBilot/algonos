@@ -11,5 +11,5 @@ import SwiftyJSON
 
 protocol Request {
     func fetch(_ completion: @escaping (_ json: JSON) -> Void)
-    func fetchWithId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void)
+    func fetchWithCategoryId(_ id: String?, _ completion: @escaping (_ json: JSON) -> Void)
 }
