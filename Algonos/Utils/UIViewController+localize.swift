@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIViewController {
-    func localize(_ str: String) -> String {
+class Localizer {
+    static func localize(_ str: String) -> String {
         return NSLocalizedString(str, comment: "")
     }
 }

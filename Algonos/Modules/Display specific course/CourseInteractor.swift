@@ -18,11 +18,9 @@ class CourseInteractor {
     }
     
     func loadContent() {
-        CourseRequest().fetchWithId(course?._id) { json in
-            self.course?.content = Content(json: json)
-            self.presenter.presentText((self.course?.content!.text)!)
-            self.presenter.presentImage((self.course?.content!.code)!)
-            self.presenter.presentComplexity((self.course?.content!.complexity)!)
-        }
+        guard let content = self.course?.content else { return }
+        self.presenter.presentText(content.text!)
+        self.presenter.presentImage(content.code!)
+        self.presenter.presentComplexity(content.complexity!)
     }
 }

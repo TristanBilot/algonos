@@ -36,7 +36,6 @@
 		BA5979EE23C76C1C008CF5A5 /* CoursePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */; };
 		BA5979F023C76C2C008CF5A5 /* CourseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */; };
 		BA5979F223C76C3B008CF5A5 /* CoursePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */; };
-		BA78F54323C77204004B919B /* DisplayCourseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78F54223C77204004B919B /* DisplayCourseTest.swift */; };
 		BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */; };
 		BA9A8BFF23A3C7DD00C24A52 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */; };
 		BA9A8C0223A4104200C24A52 /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A8C0123A4104200C24A52 /* CourseCell.xib */; };
@@ -109,7 +108,6 @@
 		BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePresenter.swift; sourceTree = "<group>"; };
 		BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseInteractor.swift; sourceTree = "<group>"; };
 		BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePresentable.swift; sourceTree = "<group>"; };
-		BA78F54223C77204004B919B /* DisplayCourseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCourseTest.swift; sourceTree = "<group>"; };
 		BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+localize.swift"; sourceTree = "<group>"; };
 		BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		BA9A8C0123A4104200C24A52 /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
@@ -332,7 +330,6 @@
 			children = (
 				BAC417A123A2981A00AC1EE5 /* AlgonosTests.swift */,
 				BAC417A323A2981A00AC1EE5 /* Info.plist */,
-				BA78F54223C77204004B919B /* DisplayCourseTest.swift */,
 			);
 			path = AlgonosTests;
 			sourceTree = "<group>";
@@ -661,7 +658,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC417A223A2981A00AC1EE5 /* AlgonosTests.swift in Sources */,
-				BA78F54323C77204004B919B /* DisplayCourseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

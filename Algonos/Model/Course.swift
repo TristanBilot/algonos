@@ -28,6 +28,6 @@ class Course: Model {
         title = json["title"].string
         categoryId = json["categoryId"].string
         percentage = json["percentage"].string
-//        content = Content(json: json)
+        content = Content(json: json)
     }
 }

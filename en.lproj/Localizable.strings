@@ -7,3 +7,4 @@
 */
 
 "HomeTitle" = "Courses";
+"text_content_network_error" = "The course can't be loaded, please check your Internet connection.";

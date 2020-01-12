@@ -34,7 +34,7 @@ class CategoriesViewController: UIViewController {
     
     //MARK: - Setup functions
     func initStyle() {
-        self.navigationItem.title = localize("HomeTitle")
+        self.navigationItem.title = Localizer.localize("HomeTitle")
     }
     
     func setup() {
