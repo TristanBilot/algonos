@@ -30,17 +30,19 @@ class CourseCell: UITableViewCell {
         self.progressBarView.backgroundColor = UIColor.clear
         self.courseLabel.text = course?.title
         self.containerView.layer.cornerRadius = 10
+        
+        progressBarView.isHidden = true
     }
   
     func initCell(controller: CourseListViewController, course: Course) {
         self.courseLabel.text = course.title
         self.course = course
         self.controller = controller
-        progressRingBuilder.initProgressRing(
-            progressBar: progressBarView,
-            safePercent: course.percentage ?? "0",
-            animation: !alreadyLoaded
-        )
+//        progressRingBuilder.initProgressRing(
+//            progressBar: progressBarView,
+//            safePercent: course.percentage ?? "0",
+//            animation: !alreadyLoaded
+//        )
         alreadyLoaded = true
     }
     

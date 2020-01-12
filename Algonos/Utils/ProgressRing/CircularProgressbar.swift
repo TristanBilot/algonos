@@ -143,7 +143,7 @@ class CircularProgressBar: UIView {
     private func makeLabel(withText text: String) -> UILabel {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         label.text = text
-        label.font = UIFont.systemFont(ofSize: labelSize)
+        label.font = UIFont.boldSystemFont(ofSize: labelSize)
         label.sizeToFit()
         label.center = pathCenter
         return label
@@ -164,6 +164,7 @@ class CircularProgressBar: UIView {
     private func configLabel(){
         label.sizeToFit()
         label.center = pathCenter
+        label.font = UIFont.boldSystemFont(ofSize: labelSize)
     }
     
     private func extractPercentageSign(_ str: String) -> String {

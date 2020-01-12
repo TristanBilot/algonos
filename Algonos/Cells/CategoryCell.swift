@@ -26,15 +26,17 @@ class CategoryCell: UITableViewCell {
         if let img = category.image { self.img.image = img }
         
         initStyle()
-        progressRingBuilder.initProgressRing(
-            progressBar: progressBarView,
-            safePercent: category.percentage,
-            animation: !alreadyLoaded
-        )
+//        progressRingBuilder.initProgressRing(
+//            progressBar: progressBarView,
+//            safePercent: category.percentage,
+//            animation: !alreadyLoaded
+//        )
     }
   
     func initStyle() {
         progressBarView.backgroundColor = UIColor.clear
+        
+        progressBarView.isHidden = true
     }
     
     
