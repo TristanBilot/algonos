@@ -19,8 +19,8 @@ class CourseInteractor {
     
     func loadContent() {
         guard let content = self.course?.content else { return }
-        self.presenter.presentText(content.text!)
-        self.presenter.presentImage(content.code!)
-        self.presenter.presentComplexity(content.complexity!)
+        self.presenter.presentText(content[0]!.text!)
+        self.presenter.presentImage(content[0]!.code!)
+        self.presenter.presentComplexity(content[0]!.complexity!)
     }
 }

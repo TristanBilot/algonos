@@ -14,9 +14,9 @@ class Content {
     var complexity: Complexity?
     var code: UIImage?
     
-    init(json: JSON) {
-        text = json["content"]["text"].string ?? Localizer.localize("text_content_network_error")
-        code = UIImage().downloadImage(from: json["content"]["code"].string ?? "")
-        complexity = Complexity(json: json)
+    init(json: JSON, i: Int) {
+        text = json["content"][i]["text"].string ?? Localizer.localize("text_content_network_error")
+        code = UIImage().downloadImage(from: json["content"][i]["code"].string ?? "")
+        complexity = Complexity(json: json["content"][i])
     }
 }

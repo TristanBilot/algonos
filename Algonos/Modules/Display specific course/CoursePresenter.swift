@@ -19,11 +19,11 @@ class CoursePresenter: CoursePresentable {
     }
     
     func presentText(_ text: String) {
-        viewController?.textLabel.text = course?.content?.text
+        viewController?.textLabel.text = course?.content[0]?.text
     }
     
     func presentImage(_ image: UIImage) {
-        viewController?.codeImageView.image = course?.content?.code
+        viewController?.codeImageView.image = course?.content[0]?.code
     }
     
     func presentComplexity(_ complexity: Complexity) {
@@ -43,7 +43,7 @@ class CoursePresenter: CoursePresentable {
     fileprivate func fillValueStackView() {
         /* second stackView */
         guard let subviews = viewController?.complexityValueStackView.arrangedSubviews else { return }
-        let complexities = course?.content?.complexity
+        let complexities = course?.content[0]?.complexity
         (subviews[0] as? UILabel)?.text = complexities?.worst
         (subviews[1] as? UILabel)?.text = complexities?.average
         (subviews[2] as? UILabel)?.text = complexities?.best

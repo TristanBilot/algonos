@@ -12,7 +12,7 @@ import SwiftyJSON
 class Course: Model {
     var _id: String?
     var title: String?
-    var content: Content?
+    var content: [Content?] = []
     var categoryId: String?
     var percentage: String?
     var json: JSON
@@ -28,6 +28,10 @@ class Course: Model {
         title = json["title"].string
         categoryId = json["categoryId"].string
         percentage = json["percentage"].string
-        content = Content(json: json)
+
+        for i in 0..<json["content"].count {
+            self.content.append(Content(json: json, i: i))
+        }
+        
     }
 }
