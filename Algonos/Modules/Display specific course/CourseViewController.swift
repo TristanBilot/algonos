@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class CourseViewController : UIViewController {
-    var interactor: CourseInteractor?
+    var presenter: CoursePresentable?
     
     var course: Course?
     
@@ -18,14 +18,12 @@ class CourseViewController : UIViewController {
     private let topMargin: CGFloat = 15.0
     
     var elementCounter: Int = 0
-    var elements: JSON? // array of json elements
     var stack = Stack<UIView>()
     
     //MARK: - Setup functions
     func setup() {
-//        let presenter = CoursePresenter(vc: self, course: course)
-//        let interactor = CourseInteractor(presenter: presenter, course: self.course)
-//        self.interactor = interactor
+        let presenter = CoursePresenter(vc: self, course: course)
+        self.presenter = presenter
     }
     
     //MARK: - Init
@@ -41,62 +39,23 @@ class CourseViewController : UIViewController {
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0.0).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0).isActive = true
     }
-    
-    //MARK: - Elements construction
-    func label(text: String) -> UILabel {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = text
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
+  
+    func setNavigationItemTitle() {
+        self.navigationItem.title = course?.title
     }
     
-    func image(url: String) -> UIImageView {
-        let image = UIImage()
-        let imageView = UIImageView(image: image)
-        return imageView
-    }
     
     //MARK: - View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavigationItemTitle()
+      
         view.addSubview(scrollView)
         initScrollView()
         
         /* The scrollview is the first element of the stack */
         stack.push(scrollView)
-        
-        let label1 = label(text: "ABCvbcvnbxnbvnxbvnxbvnxb")
-        label1.backgroundColor = UIColor.green
-        addElement(label1)
-        
-        let label2 = label(text: "DEFvbcvnbxnbvnxbvnxbvnxbvxnvnxvbxnvb")
-        label2.backgroundColor = UIColor.red
-        addElement(label2)
-    }
-    
-    func switchElement(json: JSON) {
-        switch json["type"] {
-        case "label":
-            let lab = label(text: json["text"].string!)
-            addElement(lab)
-            break
-        case "image":
-            let img = image(url: json["url"].string!)
-            addElement(img)
-            break
-        default:
-            return
-        }
-    }
-    
-    func addElements() {
-        guard let elements = elements else { return }
-        for i in 0..<elements.count {
-            switchElement(json: elements[i])
-        }
+        setup()
     }
     
     func addElement(_ view: UIView) {
@@ -118,7 +77,8 @@ class CourseViewController : UIViewController {
             element.trailingAnchor.constraint(equalTo: stack.peek().trailingAnchor).isActive = true
             element.topAnchor.constraint(equalTo: stack.peek().bottomAnchor, constant: topMargin).isActive = true
         }
-        if elementCounter >= elements!.count {
+        guard let course = course else { return }
+        if elementCounter >= course.elements.count {
             element.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         }
         stack.push(element)

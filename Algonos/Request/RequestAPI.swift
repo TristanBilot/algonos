@@ -10,8 +10,8 @@ import Foundation
 import SwiftyJSON
 
 class RequestAPI {
-        static let server: String = "http://192.168.1.52:8080/"
-//    static let server: String = "http://172.20.10.2:8080/"
+//        static let server: String = "http://192.168.1.52:8080/"
+    static let server: String = "http://172.20.10.3:8080/"
 //        static let server: String = "http://localhost:8080/"
     
     static func request(to url: URL, _ completion: @escaping (_ json: JSON) -> Void) {

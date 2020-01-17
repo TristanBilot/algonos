@@ -9,7 +9,5 @@
 import UIKit
 
 protocol CoursePresentable {
-    func presentText(_ text: String)
-    func presentImage(_ image: UIImage)
-    func presentComplexity(_ complexity: Complexity)
+    func presentElements()
 }

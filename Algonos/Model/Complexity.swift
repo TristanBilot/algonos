@@ -20,8 +20,8 @@ class Complexity {
     }
     
     init?(json: JSON) {
-        self.best = json["complexity"]["best"].string ?? "?"
-        self.average = json["complexity"]["average"].string ?? "?"
-        self.worst = json["complexity"]["worst"].string ?? "?"
+        self.best = json["best"].string ?? "?"
+        self.average = json["average"].string ?? "?"
+        self.worst = json["worst"].string ?? "?"
     }
 }

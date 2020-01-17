@@ -7,45 +7,22 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CoursePresenter: CoursePresentable {
     var viewController: CourseViewController?
-    
     var course: Course?
     
     init(vc: CourseViewController, course: Course?) {
         self.viewController = vc
         self.course = course
+        presentElements()
     }
     
-    func presentText(_ text: String) {
-        viewController?.textLabel.text = course?.content[0]?.text
+    func presentElements() {
+      course?.elements.forEach({ (view) in
+        viewController?.addElement(view)
+      })
     }
-    
-    func presentImage(_ image: UIImage) {
-        viewController?.codeImageView.image = course?.content[0]?.code
-    }
-    
-    func presentComplexity(_ complexity: Complexity) {
-        fillLevelStackView()
-        fillValueStackView()
-    }
-    
-    fileprivate func fillLevelStackView() {
-        /* first stackView */
-        guard let subviews = viewController?.complexityLevelStackView.arrangedSubviews else { return }
-        let complexityLevels = ["Worst", "Average", "Best"]
-        (subviews[0] as? UILabel)?.text = complexityLevels[0]
-        (subviews[1] as? UILabel)?.text = complexityLevels[1]
-        (subviews[2] as? UILabel)?.text = complexityLevels[2]
-    }
-    
-    fileprivate func fillValueStackView() {
-        /* second stackView */
-        guard let subviews = viewController?.complexityValueStackView.arrangedSubviews else { return }
-        let complexities = course?.content[0]?.complexity
-        (subviews[0] as? UILabel)?.text = complexities?.worst
-        (subviews[1] as? UILabel)?.text = complexities?.average
-        (subviews[2] as? UILabel)?.text = complexities?.best
-    }
+
 }

@@ -12,6 +12,9 @@
 		8435D76623AA7B9C00B30CA1 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435D76523AA7B9C00B30CA1 /* RequestAPI.swift */; };
 		8435D76823AA7D9600B30CA1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435D76723AA7D9600B30CA1 /* Request.swift */; };
 		8435D76A23AA803900B30CA1 /* CategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435D76923AA803900B30CA1 /* CategoryRequest.swift */; };
+		8458FE8A23D1AD5A0000B535 /* CourseElementsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458FE8923D1AD5A0000B535 /* CourseElementsFactory.swift */; };
+		8458FE8C23D1ADDC0000B535 /* ComplexityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8458FE8B23D1ADDC0000B535 /* ComplexityView.xib */; };
+		8458FE8E23D1AE3C0000B535 /* ComplexityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458FE8D23D1AE3C0000B535 /* ComplexityView.swift */; };
 		8471BFB923AD293000025B48 /* UIColor+difficultyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471BFB823AD293000025B48 /* UIColor+difficultyColor.swift */; };
 		847C214A23ABBE4A008B9A88 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C214923ABBE4A008B9A88 /* Model.swift */; };
 		84A4F40123AB951B005DBF56 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F40023AB951B005DBF56 /* Course.swift */; };
@@ -34,13 +37,11 @@
 		BA4CFF5F23C0C2BA008BABAB /* String+substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CFF5E23C0C2BA008BABAB /* String+substring.swift */; };
 		BA5979EC23C62F05008CF5A5 /* ShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979EB23C62F05008CF5A5 /* ShimmerCell.swift */; };
 		BA5979EE23C76C1C008CF5A5 /* CoursePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */; };
-		BA5979F023C76C2C008CF5A5 /* CourseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */; };
 		BA5979F223C76C3B008CF5A5 /* CoursePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */; };
 		BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */; };
 		BA9A8BFF23A3C7DD00C24A52 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */; };
 		BA9A8C0223A4104200C24A52 /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A8C0123A4104200C24A52 /* CourseCell.xib */; };
 		BA9A8C0423A4179D00C24A52 /* UIView+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8C0323A4179D00C24A52 /* UIView+shadow.swift */; };
-		BA9A8C0623A447C200C24A52 /* CourseViewControllerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8C0523A447C200C24A52 /* CourseViewControllerOld.swift */; };
 		BA9A8C0923A55BBA00C24A52 /* CourseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8C0823A55BBA00C24A52 /* CourseRequest.swift */; };
 		BABBC0B023CE57C9008FAADE /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */; };
 		BAC4178B23A2981600AC1EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4178A23A2981600AC1EE5 /* AppDelegate.swift */; };
@@ -84,6 +85,9 @@
 		8435D76523AA7B9C00B30CA1 /* RequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
 		8435D76723AA7D9600B30CA1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8435D76923AA803900B30CA1 /* CategoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRequest.swift; sourceTree = "<group>"; };
+		8458FE8923D1AD5A0000B535 /* CourseElementsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseElementsFactory.swift; sourceTree = "<group>"; };
+		8458FE8B23D1ADDC0000B535 /* ComplexityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexityView.xib; sourceTree = "<group>"; };
+		8458FE8D23D1AE3C0000B535 /* ComplexityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexityView.swift; sourceTree = "<group>"; };
 		8471BFB823AD293000025B48 /* UIColor+difficultyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+difficultyColor.swift"; sourceTree = "<group>"; };
 		847C214923ABBE4A008B9A88 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		84A4F40023AB951B005DBF56 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -108,13 +112,11 @@
 		BA4CFF5E23C0C2BA008BABAB /* String+substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+substring.swift"; sourceTree = "<group>"; };
 		BA5979EB23C62F05008CF5A5 /* ShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerCell.swift; sourceTree = "<group>"; };
 		BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePresenter.swift; sourceTree = "<group>"; };
-		BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseInteractor.swift; sourceTree = "<group>"; };
 		BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePresentable.swift; sourceTree = "<group>"; };
 		BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+localize.swift"; sourceTree = "<group>"; };
 		BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		BA9A8C0123A4104200C24A52 /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
 		BA9A8C0323A4179D00C24A52 /* UIView+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shadow.swift"; sourceTree = "<group>"; };
-		BA9A8C0523A447C200C24A52 /* CourseViewControllerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewControllerOld.swift; sourceTree = "<group>"; };
 		BA9A8C0823A55BBA00C24A52 /* CourseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRequest.swift; sourceTree = "<group>"; };
 		BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		BAC4178723A2981600AC1EE5 /* Algonos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algonos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8458FE8823D1AD450000B535 /* CourseElements */ = {
+			isa = PBXGroup;
+			children = (
+				8458FE8923D1AD5A0000B535 /* CourseElementsFactory.swift */,
+				8458FE8B23D1ADDC0000B535 /* ComplexityView.xib */,
+				8458FE8D23D1AE3C0000B535 /* ComplexityView.swift */,
+			);
+			path = CourseElements;
+			sourceTree = "<group>";
+		};
 		84A4F3FF23AB94A6005DBF56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,11 +244,10 @@
 		BA1E05CB23C12652004589FB /* Display specific course */ = {
 			isa = PBXGroup;
 			children = (
-				BA9A8C0523A447C200C24A52 /* CourseViewControllerOld.swift */,
-				BA5979EF23C76C2C008CF5A5 /* CourseInteractor.swift */,
+				8458FE8823D1AD450000B535 /* CourseElements */,
+				BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */,
 				BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */,
 				BA5979F123C76C3B008CF5A5 /* CoursePresentable.swift */,
-				BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */,
 			);
 			path = "Display specific course";
 			sourceTree = "<group>";
@@ -494,6 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8458FE8C23D1ADDC0000B535 /* ComplexityView.xib in Resources */,
 				BAC4179723A2981A00AC1EE5 /* LaunchScreen.storyboard in Resources */,
 				BAC417C323A2F0E200AC1EE5 /* Localizable.strings in Resources */,
 				BA9A8C0223A4104200C24A52 /* CourseCell.xib in Resources */,
@@ -630,7 +642,6 @@
 				842769DC23AB8B5A00351E53 /* UIImage+downloadImage.swift in Sources */,
 				8471BFB923AD293000025B48 /* UIColor+difficultyColor.swift in Sources */,
 				BA4CFF5F23C0C2BA008BABAB /* String+substring.swift in Sources */,
-				BA9A8C0623A447C200C24A52 /* CourseViewControllerOld.swift in Sources */,
 				8435D76A23AA803900B30CA1 /* CategoryRequest.swift in Sources */,
 				8435D76623AA7B9C00B30CA1 /* RequestAPI.swift in Sources */,
 				BA9A8C0423A4179D00C24A52 /* UIView+shadow.swift in Sources */,
@@ -638,6 +649,7 @@
 				BA5979EE23C76C1C008CF5A5 /* CoursePresenter.swift in Sources */,
 				BA21E8D823AAC3C100E34470 /* CourseURLBuilder.swift in Sources */,
 				BA1E05D723C1E0FF004589FB /* CoursesInteractor.swift in Sources */,
+				8458FE8A23D1AD5A0000B535 /* CourseElementsFactory.swift in Sources */,
 				BAF216A123BBB5D5009C5031 /* ProgressRingBuilder.swift in Sources */,
 				BA1E05D323C1E0DA004589FB /* CoursesPresentable.swift in Sources */,
 				BA1D9A3923CB21BA00CD21F9 /* Complexity.swift in Sources */,
@@ -659,9 +671,9 @@
 				BA1E05D123C12768004589FB /* CategoriesPresentable.swift in Sources */,
 				BAC417BC23A29BE000AC1EE5 /* CategoryCell.swift in Sources */,
 				BAC4178B23A2981600AC1EE5 /* AppDelegate.swift in Sources */,
-				BA5979F023C76C2C008CF5A5 /* CourseInteractor.swift in Sources */,
 				BA1D9A3B23CB2DD000CD21F9 /* Content.swift in Sources */,
 				BA21E8CF23AABC6800E34470 /* CourseListViewController.swift in Sources */,
+				8458FE8E23D1AE3C0000B535 /* ComplexityView.swift in Sources */,
 				BAC6D91F23CE5AF1003A1CA7 /* Stack.swift in Sources */,
 				8435D76823AA7D9600B30CA1 /* Request.swift in Sources */,
 				BAC4178D23A2981600AC1EE5 /* SceneDelegate.swift in Sources */,
@@ -853,13 +865,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L4WX2J23JW;
+				DEVELOPMENT_TEAM = 7597364RG3;
 				INFOPLIST_FILE = Algonos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos;
+				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -872,13 +884,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L4WX2J23JW;
+				DEVELOPMENT_TEAM = 7597364RG3;
 				INFOPLIST_FILE = Algonos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos;
+				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
