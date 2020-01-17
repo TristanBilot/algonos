@@ -25,7 +25,6 @@ class CourseElementsFactory {
       imageView.contentMode = .scaleAspectFit
       imageView.translatesAutoresizingMaskIntoConstraints = false
       reduiceHeightOfImage(imageView)
-
       return imageView
   }
   

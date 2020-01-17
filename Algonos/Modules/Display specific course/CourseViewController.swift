@@ -79,7 +79,7 @@ class CourseViewController : UIViewController {
         }
         guard let course = course else { return }
         if elementCounter >= course.elements.count {
-            element.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+            element.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -2 * topMargin).isActive = true
         }
         stack.push(element)
     }
