@@ -44,17 +44,13 @@ class Course: Model {
   func createElement(json: JSON) -> UIView? {
     guard let key = json.dictionary?.keys.first else { return nil }
     switch key {
-    case "label":
-        let lab = factory.label(text: json[key].string!)
-        return lab
-    case "image":
-        let img = factory.image(url: json[key].string!)
-        return img
-    case "complexity":
-      let view = factory.complexity(complexity: Complexity(json: json[key])!)
-      return view
-    default:
-        return nil
+      
+    case "label": return factory.label(text: json[key].string!)
+    case "image": return factory.image(url: json[key].string!)
+    case "complexity": return factory.complexity(complexity: Complexity(json: json[key])!)
+    case "title": return factory.title(text: json[key].string!)
+      
+    default: return nil
     }
   }
 }

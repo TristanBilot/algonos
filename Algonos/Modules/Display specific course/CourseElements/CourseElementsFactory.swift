@@ -15,6 +15,8 @@ class CourseElementsFactory {
       let label = UILabel()
       label.numberOfLines = 0
       label.text = text
+      label.textColor = UIColor.label
+      label.addInterlineSpacing(spacingValue: 3)
       label.translatesAutoresizingMaskIntoConstraints = false
       return label
   }
@@ -35,6 +37,15 @@ class CourseElementsFactory {
     return customView
   }
   
+  func title(text: String) -> UILabel {
+    let label = UILabel()
+    label.numberOfLines = 0
+    label.text = text
+    label.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+    label.translatesAutoresizingMaskIntoConstraints = false
+    return label
+  }
+  
   //MARK: - Utils
   private func reduiceHeightOfImage(_ imageView: UIImageView) {
     /* We need to reduice the height of the imageView because we don't
@@ -46,8 +57,16 @@ class CourseElementsFactory {
     let imageHeight = imageView.image?.size.height ?? 0
     var constraintDivisor: CGFloat = 2.0
     
+    if bytes > 130000 {
+      constraintDivisor = 3.0
+    }
+    
     if bytes > 120000 {
       constraintDivisor = 2.5
+    }
+    
+    if bytes > 60000 {
+      constraintDivisor = 2.3
     }
     
     let perfectHeight = imageHeight / constraintDivisor

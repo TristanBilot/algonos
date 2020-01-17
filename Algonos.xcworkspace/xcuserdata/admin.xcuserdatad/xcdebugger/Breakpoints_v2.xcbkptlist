@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "35FCA129-3923-4E31-A2EE-79621A92D85F"
+            uuid = "0CA56FDF-3BDB-4356-8983-807A237AE49B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Algonos/Modules/Display specific course/CourseElements/CourseElementsFactory.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "image(url:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "reduiceHeightOfImage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
