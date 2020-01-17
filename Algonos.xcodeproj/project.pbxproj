@@ -15,14 +15,12 @@
 		8458FE8A23D1AD5A0000B535 /* CourseElementsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458FE8923D1AD5A0000B535 /* CourseElementsFactory.swift */; };
 		8458FE8C23D1ADDC0000B535 /* ComplexityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8458FE8B23D1ADDC0000B535 /* ComplexityView.xib */; };
 		8458FE8E23D1AE3C0000B535 /* ComplexityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458FE8D23D1AE3C0000B535 /* ComplexityView.swift */; };
-		8471BFB923AD293000025B48 /* UIColor+difficultyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471BFB823AD293000025B48 /* UIColor+difficultyColor.swift */; };
 		847C214A23ABBE4A008B9A88 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C214923ABBE4A008B9A88 /* Model.swift */; };
 		84A4F40123AB951B005DBF56 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F40023AB951B005DBF56 /* Course.swift */; };
 		84A4F40323AB9524005DBF56 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4F40223AB9524005DBF56 /* Category.swift */; };
 		B4C6882381068EF793199CD4 /* Pods_Algonos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC09458E799AB8C86AFD0526 /* Pods_Algonos.framework */; };
 		B690C30363A7FBBF68FFDC52 /* Pods_AlgonosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3874B3453A22A0FFD360D867 /* Pods_AlgonosTests.framework */; };
 		BA1D9A3923CB21BA00CD21F9 /* Complexity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1D9A3823CB21BA00CD21F9 /* Complexity.swift */; };
-		BA1D9A3B23CB2DD000CD21F9 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1D9A3A23CB2DD000CD21F9 /* Content.swift */; };
 		BA1E05CD23C12698004589FB /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05CC23C12698004589FB /* CategoriesPresenter.swift */; };
 		BA1E05CF23C126DB004589FB /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05CE23C126DB004589FB /* CategoriesInteractor.swift */; };
 		BA1E05D123C12768004589FB /* CategoriesPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1E05D023C12768004589FB /* CategoriesPresentable.swift */; };
@@ -41,7 +39,6 @@
 		BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */; };
 		BA9A8BFF23A3C7DD00C24A52 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */; };
 		BA9A8C0223A4104200C24A52 /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A8C0123A4104200C24A52 /* CourseCell.xib */; };
-		BA9A8C0423A4179D00C24A52 /* UIView+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8C0323A4179D00C24A52 /* UIView+shadow.swift */; };
 		BA9A8C0923A55BBA00C24A52 /* CourseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8C0823A55BBA00C24A52 /* CourseRequest.swift */; };
 		BABBC0B023CE57C9008FAADE /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */; };
 		BAC4178B23A2981600AC1EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4178A23A2981600AC1EE5 /* AppDelegate.swift */; };
@@ -88,7 +85,6 @@
 		8458FE8923D1AD5A0000B535 /* CourseElementsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseElementsFactory.swift; sourceTree = "<group>"; };
 		8458FE8B23D1ADDC0000B535 /* ComplexityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexityView.xib; sourceTree = "<group>"; };
 		8458FE8D23D1AE3C0000B535 /* ComplexityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexityView.swift; sourceTree = "<group>"; };
-		8471BFB823AD293000025B48 /* UIColor+difficultyColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+difficultyColor.swift"; sourceTree = "<group>"; };
 		847C214923ABBE4A008B9A88 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		84A4F40023AB951B005DBF56 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		84A4F40223AB9524005DBF56 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -97,7 +93,6 @@
 		B1F0DD760CCC04732438F96D /* Pods-AlgonosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgonosTests.debug.xcconfig"; path = "Target Support Files/Pods-AlgonosTests/Pods-AlgonosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B27E624BF1589E5247D5C951 /* Pods-Algonos-AlgonosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonos-AlgonosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Algonos-AlgonosUITests/Pods-Algonos-AlgonosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA1D9A3823CB21BA00CD21F9 /* Complexity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complexity.swift; sourceTree = "<group>"; };
-		BA1D9A3A23CB2DD000CD21F9 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		BA1E05CC23C12698004589FB /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
 		BA1E05CE23C126DB004589FB /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
 		BA1E05D023C12768004589FB /* CategoriesPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresentable.swift; sourceTree = "<group>"; };
@@ -116,7 +111,6 @@
 		BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+localize.swift"; sourceTree = "<group>"; };
 		BA9A8BFE23A3C7DD00C24A52 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		BA9A8C0123A4104200C24A52 /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
-		BA9A8C0323A4179D00C24A52 /* UIView+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shadow.swift"; sourceTree = "<group>"; };
 		BA9A8C0823A55BBA00C24A52 /* CourseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRequest.swift; sourceTree = "<group>"; };
 		BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		BAC4178723A2981600AC1EE5 /* Algonos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algonos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,10 +172,18 @@
 			isa = PBXGroup;
 			children = (
 				8458FE8923D1AD5A0000B535 /* CourseElementsFactory.swift */,
+				8493F36723D1ECA8007F98A5 /* ComplexityView */,
+			);
+			path = CourseElements;
+			sourceTree = "<group>";
+		};
+		8493F36723D1ECA8007F98A5 /* ComplexityView */ = {
+			isa = PBXGroup;
+			children = (
 				8458FE8B23D1ADDC0000B535 /* ComplexityView.xib */,
 				8458FE8D23D1AE3C0000B535 /* ComplexityView.swift */,
 			);
-			path = CourseElements;
+			path = ComplexityView;
 			sourceTree = "<group>";
 		};
 		84A4F3FF23AB94A6005DBF56 /* Model */ = {
@@ -191,7 +193,6 @@
 				84A4F40023AB951B005DBF56 /* Course.swift */,
 				84A4F40223AB9524005DBF56 /* Category.swift */,
 				BA1D9A3823CB21BA00CD21F9 /* Complexity.swift */,
-				BA1D9A3A23CB2DD000CD21F9 /* Content.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,9 +269,7 @@
 				BABBC0B123CE57FC008FAADE /* Stack */,
 				BAF2169F23BBB5B7009C5031 /* ProgressRing */,
 				BA9A8BFC23A39DC600C24A52 /* UIViewController+localize.swift */,
-				BA9A8C0323A4179D00C24A52 /* UIView+shadow.swift */,
 				842769DB23AB8B5A00351E53 /* UIImage+downloadImage.swift */,
-				8471BFB823AD293000025B48 /* UIColor+difficultyColor.swift */,
 				BA4CFF5C23C0A359008BABAB /* UIColor+rgb.swift */,
 				BA4CFF5E23C0C2BA008BABAB /* String+substring.swift */,
 			);
@@ -640,11 +639,9 @@
 			files = (
 				BA4CFF5D23C0A359008BABAB /* UIColor+rgb.swift in Sources */,
 				842769DC23AB8B5A00351E53 /* UIImage+downloadImage.swift in Sources */,
-				8471BFB923AD293000025B48 /* UIColor+difficultyColor.swift in Sources */,
 				BA4CFF5F23C0C2BA008BABAB /* String+substring.swift in Sources */,
 				8435D76A23AA803900B30CA1 /* CategoryRequest.swift in Sources */,
 				8435D76623AA7B9C00B30CA1 /* RequestAPI.swift in Sources */,
-				BA9A8C0423A4179D00C24A52 /* UIView+shadow.swift in Sources */,
 				BA21E8D323AAC1DA00E34470 /* URLBuilderProtocol.swift in Sources */,
 				BA5979EE23C76C1C008CF5A5 /* CoursePresenter.swift in Sources */,
 				BA21E8D823AAC3C100E34470 /* CourseURLBuilder.swift in Sources */,
@@ -671,7 +668,6 @@
 				BA1E05D123C12768004589FB /* CategoriesPresentable.swift in Sources */,
 				BAC417BC23A29BE000AC1EE5 /* CategoryCell.swift in Sources */,
 				BAC4178B23A2981600AC1EE5 /* AppDelegate.swift in Sources */,
-				BA1D9A3B23CB2DD000CD21F9 /* Content.swift in Sources */,
 				BA21E8CF23AABC6800E34470 /* CourseListViewController.swift in Sources */,
 				8458FE8E23D1AE3C0000B535 /* ComplexityView.swift in Sources */,
 				BAC6D91F23CE5AF1003A1CA7 /* Stack.swift in Sources */,

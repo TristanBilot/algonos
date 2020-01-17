@@ -11,6 +11,10 @@ import UIKit
 class ComplexityView: UIView {
   var complexity: Complexity?
   
+  let nibHeight: CGFloat = 120.0
+  let nibColor: UIColor = UIColor.systemGray5
+  let nibRadius: CGFloat = 10
+  
   @IBOutlet weak var titlesStackView: UIStackView!
   @IBOutlet weak var complexitiesStackView: UIStackView!
   
@@ -21,7 +25,6 @@ class ComplexityView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
   }
   
   class func instanceFromNib() -> ComplexityView {
@@ -30,12 +33,12 @@ class ComplexityView: UIView {
   
   // MARK: - Style init
   func formatConstraints() {
-    self.heightAnchor.constraint(equalToConstant: 120).isActive = true
+    self.heightAnchor.constraint(equalToConstant: nibHeight).isActive = true
   }
   
   func initStyle() {
-    backgroundColor = UIColor.systemGray5
-    layer.cornerRadius = 10
+    backgroundColor    = nibColor
+    layer.cornerRadius = nibRadius
   }
   
   func initComplexity(complexity: Complexity) {
