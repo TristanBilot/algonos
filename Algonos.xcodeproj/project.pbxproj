@@ -42,6 +42,10 @@
 		BA9A8C0223A4104200C24A52 /* CourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A8C0123A4104200C24A52 /* CourseCell.xib */; };
 		BA9A8C0923A55BBA00C24A52 /* CourseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A8C0823A55BBA00C24A52 /* CourseRequest.swift */; };
 		BABBC0B023CE57C9008FAADE /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */; };
+		BAC0960323D310EB006C0140 /* ComplexityTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC0960223D310EB006C0140 /* ComplexityTableView.xib */; };
+		BAC0960523D31263006C0140 /* ComplexityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC0960423D31263006C0140 /* ComplexityTableViewCell.xib */; };
+		BAC0960723D312DD006C0140 /* ComplexityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0960623D312DD006C0140 /* ComplexityTableViewCell.swift */; };
+		BAC0960923D31577006C0140 /* ComplexityTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0960823D31577006C0140 /* ComplexityTableView.swift */; };
 		BAC4178B23A2981600AC1EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4178A23A2981600AC1EE5 /* AppDelegate.swift */; };
 		BAC4178D23A2981600AC1EE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4178C23A2981600AC1EE5 /* SceneDelegate.swift */; };
 		BAC4179223A2981600AC1EE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4179023A2981600AC1EE5 /* Main.storyboard */; };
@@ -115,6 +119,10 @@
 		BA9A8C0123A4104200C24A52 /* CourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCell.xib; sourceTree = "<group>"; };
 		BA9A8C0823A55BBA00C24A52 /* CourseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRequest.swift; sourceTree = "<group>"; };
 		BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		BAC0960223D310EB006C0140 /* ComplexityTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexityTableView.xib; sourceTree = "<group>"; };
+		BAC0960423D31263006C0140 /* ComplexityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexityTableViewCell.xib; sourceTree = "<group>"; };
+		BAC0960623D312DD006C0140 /* ComplexityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexityTableViewCell.swift; sourceTree = "<group>"; };
+		BAC0960823D31577006C0140 /* ComplexityTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexityTableView.swift; sourceTree = "<group>"; };
 		BAC4178723A2981600AC1EE5 /* Algonos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algonos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC4178A23A2981600AC1EE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAC4178C23A2981600AC1EE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +255,7 @@
 		BA1E05CB23C12652004589FB /* Display specific course */ = {
 			isa = PBXGroup;
 			children = (
+				BAC0960123D3109C006C0140 /* ComplexityTableView */,
 				8458FE8823D1AD450000B535 /* CourseElements */,
 				BABBC0AF23CE57C9008FAADE /* CourseViewController.swift */,
 				BA5979ED23C76C1C008CF5A5 /* CoursePresenter.swift */,
@@ -307,6 +316,17 @@
 				BAC6D91E23CE5AF1003A1CA7 /* Stack.swift */,
 			);
 			path = Stack;
+			sourceTree = "<group>";
+		};
+		BAC0960123D3109C006C0140 /* ComplexityTableView */ = {
+			isa = PBXGroup;
+			children = (
+				BAC0960823D31577006C0140 /* ComplexityTableView.swift */,
+				BAC0960223D310EB006C0140 /* ComplexityTableView.xib */,
+				BAC0960623D312DD006C0140 /* ComplexityTableViewCell.swift */,
+				BAC0960423D31263006C0140 /* ComplexityTableViewCell.xib */,
+			);
+			path = ComplexityTableView;
 			sourceTree = "<group>";
 		};
 		BAC4177E23A2981600AC1EE5 = {
@@ -510,7 +530,9 @@
 				8458FE8C23D1ADDC0000B535 /* ComplexityView.xib in Resources */,
 				BAC4179723A2981A00AC1EE5 /* LaunchScreen.storyboard in Resources */,
 				BAC417C323A2F0E200AC1EE5 /* Localizable.strings in Resources */,
+				BAC0960323D310EB006C0140 /* ComplexityTableView.xib in Resources */,
 				BA9A8C0223A4104200C24A52 /* CourseCell.xib in Resources */,
+				BAC0960523D31263006C0140 /* ComplexityTableViewCell.xib in Resources */,
 				BAC4179423A2981A00AC1EE5 /* Assets.xcassets in Resources */,
 				BAC4179223A2981600AC1EE5 /* Main.storyboard in Resources */,
 			);
@@ -661,8 +683,10 @@
 				84A4F40123AB951B005DBF56 /* Course.swift in Sources */,
 				BA9A8BFD23A39DC600C24A52 /* UIViewController+localize.swift in Sources */,
 				BABBC0B023CE57C9008FAADE /* CourseViewController.swift in Sources */,
+				BAC0960923D31577006C0140 /* ComplexityTableView.swift in Sources */,
 				847C214A23ABBE4A008B9A88 /* Model.swift in Sources */,
 				BAF216A323BD2267009C5031 /* CircularProgressbar.swift in Sources */,
+				BAC0960723D312DD006C0140 /* ComplexityTableViewCell.swift in Sources */,
 				84A4F40323AB9524005DBF56 /* Category.swift in Sources */,
 				BAC417C923A2F2FC00AC1EE5 /* AccountViewController.swift in Sources */,
 				BA5979F223C76C3B008CF5A5 /* CoursePresentable.swift in Sources */,
@@ -865,13 +889,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7597364RG3;
+				DEVELOPMENT_TEAM = L4WX2J23JW;
 				INFOPLIST_FILE = Algonos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos4;
+				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -884,13 +908,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7597364RG3;
+				DEVELOPMENT_TEAM = L4WX2J23JW;
 				INFOPLIST_FILE = Algonos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos4;
+				PRODUCT_BUNDLE_IDENTIFIER = TristanBilot.Algonos5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
